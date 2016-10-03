@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage    		= "https://github.com/inbeacon/InbeaconSdk-IOS"
   s.author       		= { 'Ronald van Woensel' => 'ronald@inbeacon.nl' }
   s.platform     		= :ios
-  s.ios.deployment_target 	= '8.0'
+  s.ios.deployment_target 	= '9.3'
   s.source       		= { :git => "https://github.com/inbeacon/InbeaconSdk-IOS.git", :tag => s.version.to_s } 
   s.documentation_url 		= 'https://github.com/inbeacon/InbeaconSdk-IOS'
 
