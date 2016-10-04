@@ -133,6 +133,7 @@ typedef SWIFT_ENUM(NSInteger, InbLogLevel) {
 };
 
 @class UILocalNotification;
+@class UNNotification;
 @class NSNumber;
 @class NSError;
 
@@ -148,6 +149,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) InbeaconSdk * _Nonnull
 - (void)refreshWithForce:(BOOL)force;
 - (void)refresh;
 - (BOOL)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
+- (BOOL)didReceiveUserNotification:(UNNotification * _Nonnull)notification;
 /**
   <hr/>
   \code
