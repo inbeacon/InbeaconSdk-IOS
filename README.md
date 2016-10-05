@@ -1,11 +1,6 @@
 ## Installation
 
-The Inbeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```
-pod "InbeaconSdk"
-```
+Download the framework and put it in your Xcode project. 
 
 ## Configuring the app
 
@@ -28,14 +23,15 @@ Copy your client-ID and client-Secret, with these you can initalize your app
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: 
                                                  (NSDictionary *) launchOptions {
-   [InbeaconSdk createWithClientID: @"<your client-ID>" 
-                andClientSecret: @"<your client-Secret>"];
+
+   inBeaconSdk *inbeacon=[inBeaconSdk inbeaconWithClientID: @"<your client­ID>"
+                                           andClientSecret: @"<your client­secret>"];
                      
 }
 - (void)application:(UIApplication *)application 
                      didReceiveLocalNotification:(UILocalNotification *)notification {
                      
-    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
+  [[inBeaconSdk getInstance] didReceiveLocalNotification:notification];    
 }
 ```
 
@@ -50,16 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, 
 didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-InbeaconSdk.createWith(clientId: "<your client-ID>", 
-clientSecret:  "<your client-Secret")
+       inBeaconSdk.inbeaconWithClientID("xxxxx", andClientSecret: "xxxxx") return true
        return true
     }
     
     func application(application: UIApplication, 
 didReceiveLocalNotification notification: UILocalNotification) {
 
-       InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
+     inBeaconSdk.getInstance().didReceiveLocalNotification(notification)
     }
 }
 ```
@@ -68,6 +62,3 @@ didReceiveLocalNotification notification: UILocalNotification) {
 Please go to the Extra/SDK page of the inBeacon backend for more detailed information
 
 
-## Changelog
-2016/10/04 Version 2.1.0 Xcode 8 / swift 3 version
-2016/08/12 Version 2.0.4 Final Xcode 7 version
