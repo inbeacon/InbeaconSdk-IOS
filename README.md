@@ -12,6 +12,7 @@ pod "InbeaconSdk"
 Log in to the inBeacon backend [http://console.inbeacon.nl/](http://console.inbeacon.nl/) and go the the Extra/SDK page.
 Copy your client-ID and client-Secret, with these you can initalize your app
 
+
 ## Usage
 
 1. Add descriptions for the use of Location in the "custom iOS Target Properties" on the target "info" page of the plist. NSLocationAlwaysUsageDescription should contain a custom text. Without this property, the app never asks for permission and the SDK won't function!
@@ -70,5 +71,3 @@ Please go to the Extra/SDK page of the inBeacon backend for more detailed inform
 ## Changelog
 2016/10/04 Version 2.1.0 Xcode 8 / swift 3 version
 2016/08/12 Version 2.0.4 Final Xcode 7 version
-
- 
