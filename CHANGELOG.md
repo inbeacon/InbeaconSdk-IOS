@@ -31,7 +31,7 @@ and actions
 - Xcode 7.3
 - Added full-backgroundmode allow flag for iOS 9
 
-###1.3.8 (6-Apr-2016)
+#### 1.3.8 (6-Apr-2016)
 - added the getBeaconState method
 - SDK footprint: 353k (without sound resources)
 
