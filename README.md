@@ -68,6 +68,3 @@ didReceiveLocalNotification notification: UILocalNotification) {
 Please go to the Extra/SDK page of the inBeacon backend for more detailed information
 
 
-## Changelog
-2016/10/04 Version 2.1.0 Xcode 8 / swift 3 version
-2016/08/12 Version 2.0.4 Final Xcode 7 version
