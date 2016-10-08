@@ -9,7 +9,7 @@ pod "InbeaconSdk"
 
 ## Configuring the app
 
-Log in to the inBeacon backend [http://console.inbeacon.nl/](http://console.inbeacon.nl/) and go the the Developer -> SDK page.
+Log in to the inBeacon backend [http://console.inbeacon.nl/](http://console.inbeacon.nl/) and go the the Developer -> Mobile applications SDK page.
 Copy your client-ID and client-Secret, with these you can initalize your app
 
 
