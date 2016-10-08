@@ -456,9 +456,7 @@ import InbeaconSdk
   Forward the notification in your UserNotification delegate as follows:
   ```swift
   //Swift
-  func userNotificationCenter(_ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse,
-        withCompletionHandler completionHandler: @escaping () -> Void) {
+  func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
                   // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
         }
@@ -468,11 +466,9 @@ import InbeaconSdk
 
   ```objc
   //Objective-C
-  - (void)userNotificationCenter:(UNUserNotificationCenter *)center
-          didReceiveNotificationResponse:(UNNotificationResponse *)response
-          withCompletionHandler:(void (^)())completionHandler {
-
+  - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+  }
   ```
 
 
