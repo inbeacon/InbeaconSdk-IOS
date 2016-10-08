@@ -366,13 +366,8 @@ import InbeaconSdk
 #import <InbeaconSdk/InbeaconSdk.h>
 ```
 
-There are 2 sdk methods that are required for minimal inBeacon integration:
-
-- initialize
-- forward local notifications
-
 #### `CreateWith(ClientID:  ClientSecret:)`
-  Initialize the SDK with your credentials
+- Initialize the SDK with your credentials
 
   ```swift
   //Swift
@@ -383,10 +378,8 @@ There are 2 sdk methods that are required for minimal inBeacon integration:
   [InbeaconSdk createWithClientID: @"<your client-ID" andClientSecret: @"<your client-secret>"];
   ```
 
-
   Initialize the SDK with your clientID and clientSecret. These credentials are used for communication with the server.
   You can find your client-ID and client-Secret in your account overview. See [http://console.inbeacon.nl/accmgr](http://console.inbeacon.nl/accmgr)
-
   ##### Example:
   Initialize the SDK in your appdelegate in the didFinishLaunchingWithOptions method as follows:
 
@@ -408,7 +401,7 @@ There are 2 sdk methods that are required for minimal inBeacon integration:
 
 #### `sharedInstance`
 
-  inbeaconWithClientID:andClientSecret returns a singleton instance. You can always obtain this instance by using:
+- inbeaconWithClientID:andClientSecret returns a singleton instance. You can always obtain this instance by using:
 
   ```objc
   //Swift and Objective-C
@@ -419,7 +412,7 @@ There are 2 sdk methods that are required for minimal inBeacon integration:
 
 #### `didReceiveLocalNotification()`
 
-  In addition, you need to forward localnotifications to the inBeacon SDK by putting an extra method in your appdelegate:
+- In addition, you need to forward localnotifications to the inBeacon SDK by putting an extra method in your appdelegate:
   ```swift
   //Swift
   InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
