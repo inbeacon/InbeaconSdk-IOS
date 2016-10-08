@@ -472,90 +472,61 @@ import InbeaconSdk
   ```
 
 >Note
+
 >This is the minimum setup for integrating the inBeacon SDK.
 
 
-## Full swift code example for minimal setup:
+### Full code examples for minimal setup:
 
-**File: AppDelegate.swift**
+#### `File: AppDelegate.swift`
 
+```swift
+// Swift
 import UIKit
-
-import **InbeaconSdk**
+import InbeaconSdk
 
 @UIApplicationMain
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication,
-
-didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-**InbeaconSdk.createWith(clientId: ****"<your client-ID>"****, **
-
-**clientSecret:  ****"<your client-Secret"****)**
-
-       return true
-
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret: "<your client-Secret")
+        return true
     }
 
-
-
-    func application(_ application: UIApplication,
-
-           didReceive notification: UILocalNotification) {
-
-**       InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)**
-
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
     }
-
 }
+```
 
-## Full objective-C code example for minimal setup:
-
-## File: AppDelegate.m
+#### `File: AppDelegate.m`
+```objc
+// Objective-C
 
 #import "AppDelegate.h"
-
 @import InbeaconSdk;
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application
-
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-**    [InbeaconSdk createWithClientID: ****@"<your client-id>"**** **
-
-**andClientSecret: ****@"<your client-secret>"****];    **
-
-
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [InbeaconSdk createWithClientID: @"<your client-id>" andClientSecret: @"<your client-secret>"];   
     return YES;
-
 }
 
-- (void)application:(UIApplication *)application
-
-didReceiveLocalNotification:(UILocalNotification *)notification {
-
-**    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];**
-
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
 }
+```
 
-## Optional SDK features
+### Optional SDK features
 
-### logLevel
-
-The SDK can log detailed information to the console, but the amount is controlled by the logLevel.
-
-By default, the logLevel is set to *Severe*, but you can increase the loglevel by setting it:
+#### `logLevel`
+- The SDK can log detailed information to the console, but the amount is controlled by the logLevel. By default, the logLevel is set to `Severe`, but you can increase the loglevel by setting it:
 
 <table>
   <tr>
