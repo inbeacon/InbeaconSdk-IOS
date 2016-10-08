@@ -445,35 +445,35 @@ import InbeaconSdk
 #### `didReceiveUserNotification()`
 
 - Working with the iOS 10 UserNotification framework? In that case you can replace the `didReceiveLocalNotification` as described above with a call to `didReceiveUserNotification`
-```swift
-//Swift
-InbeaconSdk.sharedInstance.didReceiveUserNotification(notification)
-```
-```objc
-//Objective-C
-[InbeaconSdk.sharedInstance didReceiveUserNotification:notification];
-```
-Forward the notification in your UserNotification delegate as follows:
-```swift
-//Swift
-func userNotificationCenter(_ center: UNUserNotificationCenter,
-      didReceive response: UNNotificationResponse,
-      withCompletionHandler completionHandler: @escaping () -> Void) {
-      If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
-                // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-      }
-      completionHandler()
-}
-```
+  ```swift
+  //Swift
+  InbeaconSdk.sharedInstance.didReceiveUserNotification(notification)
+  ```
+  ```objc
+  //Objective-C
+  [InbeaconSdk.sharedInstance didReceiveUserNotification:notification];
+  ```
+  Forward the notification in your UserNotification delegate as follows:
+  ```swift
+  //Swift
+  func userNotificationCenter(_ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void) {
+        If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
+                  // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
+        }
+        completionHandler()
+  }
+  ```
 
-```objc
-//Objective-C
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-        didReceiveNotificationResponse:(UNNotificationResponse *)response
-        withCompletionHandler:(void (^)())completionHandler {
+  ```objc
+  //Objective-C
+  - (void)userNotificationCenter:(UNUserNotificationCenter *)center
+          didReceiveNotificationResponse:(UNNotificationResponse *)response
+          withCompletionHandler:(void (^)())completionHandler {
 
-  [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
-```
+    [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+  ```
 
 
 
