@@ -366,127 +366,87 @@ import InbeaconSdk
 #import <InbeaconSdk/InbeaconSdk.h>
 ```
 
-</td>
-  </tr>
-</table>
-
-
 There are 2 sdk methods that are required for minimal inBeacon integration:
 
-* initialize
+- initialize
+- forward local notifications
 
-* forward local notifications
+#### `CreateWith(ClientID:  ClientSecret:)`
+  Initialize the SDK with your credentials
 
-### CreateWith ClientID:  ClientSecret:
-
-<table>
-  <tr>
-    <td>Swift
-
-InbeaconSdk.createWith(
-clientId: "<your client-ID>",
-clientSecret: "<your client-secret>")
-</td>
-    <td>Objective-C
-
-[InbeaconSdk createWithClientID: @"<your client-ID"
-andClientSecret: @"<your client-secret>"];
-
-</td>
-  </tr>
-</table>
+  ```swift
+  //Swift
+  InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret: "<your client-secret>")
+  ```
+  ```objc
+  //Objective-C
+  [InbeaconSdk createWithClientID: @"<your client-ID" andClientSecret: @"<your client-secret>"];
+  ```
 
 
-Initialize the SDK with your clientID and clientSecret. These credentials are used for communication with the server.
+  Initialize the SDK with your clientID and clientSecret. These credentials are used for communication with the server.
+  You can find your client-ID and client-Secret in your account overview. See [http://console.inbeacon.nl/accmgr](http://console.inbeacon.nl/accmgr)
 
-You can find your client-ID and client-Secret in your account overview. See [http://console.inbeacon.nl/accmgr](http://console.inbeacon.nl/accmgr)
+  ##### Example:
+  Initialize the SDK in your appdelegate in the didFinishLaunchingWithOptions method as follows:
 
-Initialize the SDK in your appdelegate in the didFinishLaunchingWithOptions method as follows:
+  ```swift
+  //Swift
+  func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-<table>
-  <tr>
-    <td>Swift
-func application(application: UIApplication,
-didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+         InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
+         ...
+  }
+  ```
+  ```objc
+  //Objective-C
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
+      [InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"];     
+      …
+  }
+  ```
 
-       InbeaconSdk.createWith(
-clientId: "<your client-ID>",
-clientSecret:  "<your client-secret>")
-...
-}</td>
-  </tr>
-  <tr>
-    <td>Objective-C
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:
-(NSDictionary *) launchOptions {
-[InbeaconSdk createWithClientID: @"<your client-ID>"
-andClientSecret: @"<your client-Secret>"];     
-…
-}</td>
-  </tr>
-</table>
+#### `sharedInstance`
 
+  inbeaconWithClientID:andClientSecret returns a singleton instance. You can always obtain this instance by using:
 
-### sharedinstance
-
-Notice that inbeaconWithClientID:andClientSecret returns a singleton instance. You can always obtain this instance by using:
-
-<table>
-  <tr>
-    <td>Swift
-
-InbeaconSdk.sharedInstance</td>
-    <td>Objective-C
-
-InbeaconSdk.sharedInstance
-</td>
-  </tr>
-</table>
+  ```objc
+  //Swift and Objective-C
+  InbeaconSdk.sharedInstance
+  ```
 
 
-### didReceiveLocalNotification:
 
-In addition, you need to forward localnotifications to the inBeacon SDK by putting an extra method in your appdelegate:
+#### `didReceiveLocalNotification()`
 
-<table>
-  <tr>
-    <td>Swift
+  In addition, you need to forward localnotifications to the inBeacon SDK by putting an extra method in your appdelegate:
+  ```swift
+  //Swift
+  InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
+  ```
+  ```objc
+  //Objective-C
+  [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
+  ```
 
-InbeaconSdk.sharedInstance
-.didReceiveLocalNotification(notification)
-</td>
-    <td>Objective-C
+  Forward the localnotification  in your appdelegate in the didReceiveLocalNotification method as follows:
+  ```swift
+  //Swift
+  func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+    if !InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification) {
+            // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
+    }
+  }
+  ```
+  ```objc
+  //Objective-C
+  - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 
-[InbeaconSdk.sharedInstance
-didReceiveLocalNotification:notification];
-</td>
-  </tr>
-</table>
-
-
-Forward the localnotification  in your appdelegate in the didReceiveLocalNotification method as follows:
-
-<table>
-  <tr>
-    <td>Swift
-       func application(_ application: UIApplication,
-              didReceive notification: UILocalNotification) {
-       if !InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification) {
-                 // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-                           }
-}</td>
-  </tr>
-  <tr>
-    <td>Objective-C
-- (void)application:(UIApplication *)application
-didReceiveLocalNotification:(UILocalNotification *)notification {
-
-    if (![InbeaconSdk.sharedInstance didReceiveLocalNotification:notification]) {
-                // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-                     }
-}</td>
-  </tr>
-</table>
+      if (![InbeaconSdk.sharedInstance didReceiveLocalNotification:notification]) {
+            // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
+      }
+  }
+  ```
 
 
 ### didReceiveUserNotification
