@@ -23,7 +23,7 @@ Copy your client-ID and client-Secret, with these you can initalize your app
 
 #### AppDelegate.m
 
-```
+```objc
 #import <InbeaconSdk/InbeaconSdk.h>
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: 
@@ -40,7 +40,7 @@ Copy your client-ID and client-Secret, with these you can initalize your app
 ```
 
 #### AppDelegate.swift
-```
+```swift
 import UIKit
 import InbeaconSdk
 
