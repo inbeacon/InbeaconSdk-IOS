@@ -26,15 +26,11 @@ Copy your client-ID and client-Secret, with these you can initalize your app
 ```objc
 #import <InbeaconSdk/InbeaconSdk.h>
 ...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: 
-                                                 (NSDictionary *) launchOptions {
-   [InbeaconSdk createWithClientID: @"<your client-ID>" 
-                andClientSecret: @"<your client-Secret>"];
-                     
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
+    [InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"]; 
 }
-- (void)application:(UIApplication *)application 
-                     didReceiveLocalNotification:(UILocalNotification *)notification {
-                     
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
 }
 ```
