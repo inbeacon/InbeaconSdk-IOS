@@ -442,59 +442,43 @@ import InbeaconSdk
   ```
 
 
-### didReceiveUserNotification
+#### `didReceiveUserNotification()`
 
-Working with the iOS 10 UserNotification framework? In that case you can replace the **didReceiveLocalNotification** as described above with a call to **didReceiveUserNotification **
-
-<table>
-  <tr>
-    <td>Swift
-
-InbeaconSdk.sharedInstance
-.didReceiveUserNotification(notification)
-</td>
-    <td>Objective-C
-
-[InbeaconSdk.sharedInstance
-didReceiveUserNotification:notification];
-</td>
-  </tr>
-</table>
-
-
+- Working with the iOS 10 UserNotification framework? In that case you can replace the `didReceiveLocalNotification` as described above with a call to `didReceiveUserNotification`
+```swift
+//Swift
+InbeaconSdk.sharedInstance.didReceiveUserNotification(notification)
+```
+```objc
+//Objective-C
+[InbeaconSdk.sharedInstance didReceiveUserNotification:notification];
+```
 Forward the notification in your UserNotification delegate as follows:
+```swift
+//Swift
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+      didReceive response: UNNotificationResponse,
+      withCompletionHandler completionHandler: @escaping () -> Void) {
+      If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
+                // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
+      }
+      completionHandler()
+}
+```
 
-<table>
-  <tr>
-    <td>Swift
-  func userNotificationCenter(_ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse,
-        withCompletionHandler completionHandler: @escaping () -> Void) {
+```objc
+//Objective-C
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+        didReceiveNotificationResponse:(UNNotificationResponse *)response
+        withCompletionHandler:(void (^)())completionHandler {
 
-        If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
-                  // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-               }
-        completionHandler()
-  }</td>
-  </tr>
-  <tr>
-    <td>Objective-C
-  - (void)userNotificationCenter:(UNUserNotificationCenter *)center
-          didReceiveNotificationResponse:(UNNotificationResponse *)response
-          withCompletionHandler:(void (^)())completionHandler {
-
-    [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
-}</td>
-  </tr>
-</table>
+  [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+```
 
 
-<table>
-  <tr>
-    <td>Note</td>
-    <td>This is the minimum setup for integrating the inBeacon SDK. </td>
-  </tr>
-</table>
+
+>Note
+>This is the minimum setup for integrating the inBeacon SDK.
 
 
 ## Full swift code example for minimal setup:
