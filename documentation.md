@@ -471,8 +471,6 @@ import InbeaconSdk
   }
   ```
 
-
-
 >Note
 >This is the minimum setup for integrating the inBeacon SDK.
 
