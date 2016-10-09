@@ -306,7 +306,7 @@ Using Carthage or downloaded files, a few application settings must be configure
 
 1. ##### Add descriptions for use of Location
 
-  Add two text items to the custom target info.
+  Add two text items to the custom iOS target Properties in your plist "info" section.
   >Note
   >Without these, the app never asks for permission to use location and inBeacon won’t function!
 

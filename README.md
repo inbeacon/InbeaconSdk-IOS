@@ -2,42 +2,26 @@
 
 See the Wiki for the [full documentation](https://github.com/inbeacon/InbeaconSdk-IOS/wiki)
 
-## Installation
+## Basic implementation
 
-The Inbeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+1. The Inbeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
+it, add the following line to your Podfile: (use version 2.0.x for xCode 7, 2.1.x and higher for xCode 8)
 
-```
-pod "InbeaconSdk"
-```
+	```ruby
+	pod "InbeaconSdk", '~> 2.1'  
+	```
 
-## Configuring the app
-
-Log in to the inBeacon backend [http://console.inbeacon.nl/](http://console.inbeacon.nl/) and go the the Developer -> Mobile applications SDK page.
-Copy your client-ID and client-Secret, with these you can initalize your app
+1. Get your `client-ID` and `client-Secret` from your [inBeacon account page](https://console.inbeacon.nl/accmgr) and use these  credentials to configure your app.
 
 
-## Usage
+1.   Add a text item `NSLocationAlwaysUsageDescription` to the custom iOS target Properties in your plist "info" section.
+	NSLocationAlwaysUsageDescription should contain a custom text.   
 
-1. Add descriptions for the use of Location in the "custom iOS Target Properties" on the target "info" page of the plist. NSLocationAlwaysUsageDescription should contain a custom text. Without this property, the app never asks for permission and the SDK won't function!
+	>Without this, the app never asks for permission to use location and inBeacon won’t function!
 
-2. (optional) set Background mode "location updates" if you want full background mode with continuous beacon ranging. 
+1. Edit your AppDelegate.swift / AppDelegate.m
 
-3. Edit your AppDelegate.swift / AppDelegate.m
 
-#### AppDelegate.m
-
-```objc
-#import <InbeaconSdk/InbeaconSdk.h>
-...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
-    [InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"]; 
-}
-
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
-}
-```
 
 #### AppDelegate.swift
 ```swift
@@ -58,5 +42,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
+#### AppDelegate.m
 
+```objc
+#import <InbeaconSdk/InbeaconSdk.h>
+...
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
+    [InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"]; 
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
+}
+```
 
