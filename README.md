@@ -33,12 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret:  "<your client-Secret")
-        return true
+		InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret:  "<your client-Secret")
+		return true
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
+		InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification)
     }
 }
 ```
