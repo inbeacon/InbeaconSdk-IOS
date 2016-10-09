@@ -1,3 +1,7 @@
+#### 2.1.7 (10-Oct-2016)
+- New documentation pages
+- examples now included in the repository 
+
 #### 2.1.6 (07-Oct-2016)
 - Added bitcoded version of framework to repo
 - Release and changelog info
