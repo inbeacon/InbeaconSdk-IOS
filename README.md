@@ -59,7 +59,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-## More information
-Please go to the Extra/SDK page of the inBeacon backend for more detailed information
-
 
