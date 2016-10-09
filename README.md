@@ -1,3 +1,7 @@
+## Documentation
+
+See the [Wiki](https://github.com/inbeacon/InbeaconSdk-IOS/wiki) for the full documentation
+
 ## Installation
 
 The Inbeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
