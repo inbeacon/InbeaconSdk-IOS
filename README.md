@@ -1,6 +1,6 @@
 ## Documentation
 
-See the [Wiki](https://github.com/inbeacon/InbeaconSdk-IOS/wiki) for the full documentation
+See the Wiki for the [full documentation](https://github.com/inbeacon/InbeaconSdk-IOS/wiki)
 
 ## Installation
 
