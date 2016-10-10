@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target 	= '9.3'
   s.source       		= { :git => "https://github.com/inbeacon/InbeaconSdk-IOS.git", :tag => s.version.to_s } 
   s.documentation_url 		= 'https://github.com/inbeacon/InbeaconSdk-IOS'
+  s.requires_arc		= true
 
   s.vendored_frameworks = 'InbeaconSdk.framework'
   s.resources 	  	= 'resources/*'
