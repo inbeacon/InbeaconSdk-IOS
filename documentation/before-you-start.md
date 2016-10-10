@@ -10,17 +10,17 @@ When the SDK is integrated into an app, the app will request some permissions.  
 
 ##### Application would like to access your location even when you are not using the app.
 
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_2.png)
+![image alt text](image_2.png)
 
 It is also possible to run the SDK in "Selective Location Authorisation" mode (SDK 1.3.5 and up). In this case the SDK asks for “when in use” access only, and asks for “even when you are not using the app” mode at the moment the campaign action “ask background location-scanning permission” is triggered. (see below)
 
 ##### When bluetooth is turned off:
 
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_3.png)
+![image alt text](image_3.png)
 
 > After running a few days, the user gets a notification that the app is looking for beacons or geofences (even when no beacons or geofences are actually found). We found out that this message is always given in combination with message 2), and is not related to the actual location or iBeacon features used in the app.
 
-> ![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_4.png)
+> ![image alt text](image_4.png)
 
 When the SDK is running in  "Selective Location Authorisation" mode, this message is not send until after the user was asked to add background scanning.
 
@@ -124,4 +124,4 @@ In case of a rejection when using FULL BACKGROUND mode, we’ve used this plea s
 
 >So please reconsider the rejection.
 
-`Previous:` [Home](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/README.md) `Next:` [Installing the SDK](Installing-the-SDK)
+`Previous:` [Home](README.md) `Next:` [Installing the SDK](installing-the-sdk)
