@@ -1,6 +1,6 @@
 ## Documentation
 
-See the Wiki for the [full documentation](https://github.com/inbeacon/InbeaconSdk-IOS/wiki)
+Read the [full documentation](documentation/README.md)
 
 ## Basic implementation
 
