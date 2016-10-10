@@ -1,3 +1,7 @@
+#### 2.1.8 (10-Oct-2016)
+- Cocoapods searchability
+- documentation moved to /documentation directory
+
 #### 2.1.7 (10-Oct-2016)
 - New documentation pages
 - examples now included in the repository 

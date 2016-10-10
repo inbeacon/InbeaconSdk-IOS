@@ -1,5 +1,5 @@
 # Steps
-Using CocoaPods, a few application settings must be configured for correct integration of the SDK:
+Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application settings must be configured for correct integration of the SDK:
 
 ## Add the inbeacon SDK to your podfile
   To get the latest version of the InbeaconSdk from cocoapods, add this to your Podfile 
@@ -22,6 +22,7 @@ Using CocoaPods, a few application settings must be configured for correct integ
   end
   ```
   After this run ‘pod install’ and you’re good to go.
+  
 
 ## Add descriptions for use of Location
 
