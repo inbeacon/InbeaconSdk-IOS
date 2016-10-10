@@ -1,4 +1,23 @@
-Documentation images only.
+![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_0.png)
 
-See [the wiki](https://github.com/inbeacon/InbeaconSdk-IOS/wiki) for documentation
+## inBeacon iOS xCode Swift and Objective-C SDK guide
+This document describes the latest version of the inBeacon iOS xCode SDK
+
+* [Before you start](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Before-you-start)  
+* [Installing the SDK](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Installing-the-SDK)  
+* [Using the SDK](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Using-the-SDK)  
+* [Simple example, minimal setup](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Example-code)
+* [Troubleshooting](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Troubleshooting)  
+
+### inBeacon SDK’s platform support
+Integrating inBeacon is now easier than ever. It’s a matter of pasting a few lines of code to integrate our SDK into your project. The inBeacon mobile SDK’s are available for the following platforms:
+
+* [inBeacon iOS swift and objective-c SDK](https://github.com/inbeacon/InbeaconSdk-IOS)	
+* [inBeacon Android java SDK](https://github.com/inbeacon/InbeaconSdk-android)	
+* [inBeacon Xamarin Android & iOS SDK](https://github.com/inbeacon/InbeaconSdk-xamarin)	
+* [inBeacon Cordova Android & iOS SDK](https://github.com/inbeacon/cordova-plugin-inbeacon)
+
+---
+© 2016 inBeacon bv. Padualaan 8 UtrechtInc Room Z108 3584 CH Utrecht The Netherlands
+
 
