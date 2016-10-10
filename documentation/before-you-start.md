@@ -124,4 +124,4 @@ In case of a rejection when using FULL BACKGROUND mode, we’ve used this plea s
 
 >So please reconsider the rejection.
 
-`Previous:` [Home](README.md) `Next:` [Installing the SDK](installing-the-sdk)
+`Previous:` [Home](README.md) `Next:` [Installing the SDK](installing-the-sdk.md)

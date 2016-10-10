@@ -3,11 +3,11 @@
 ## inBeacon iOS xCode Swift and Objective-C SDK guide
 This document describes the latest version of the inBeacon iOS xCode SDK
 
-* [Before you start](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Before-you-start)  
-* [Installing the SDK](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Installing-the-SDK)  
-* [Using the SDK](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Using-the-SDK)  
-* [Simple example, minimal setup](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Example-code)
-* [Troubleshooting](https://github.com/inbeacon/InbeaconSdk-IOS/wiki/Troubleshooting)  
+* [Before you start](before-you-start.md)  
+* [Installing the SDK](installing-the-sdk.md)  
+* [Using the SDK](using-the-sdk.md)  
+* [Simple example, minimal setup](example-code.md)
+* [Troubleshooting](troubleshooting.md)  
 
 ### inBeacon SDK’s platform support
 Integrating inBeacon is now easier than ever. It’s a matter of pasting a few lines of code to integrate our SDK into your project. The inBeacon mobile SDK’s are available for the following platforms:
