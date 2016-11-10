@@ -1,4 +1,4 @@
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_0.png)
+![image alt text](image_0.png)
 
 ## inBeacon iOS xCode Swift and Objective-C SDK guide
 This document describes the latest version of the inBeacon iOS xCode SDK

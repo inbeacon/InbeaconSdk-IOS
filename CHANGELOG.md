@@ -1,3 +1,6 @@
+#### 2.1.9 (10-Nov-2016)
+- xCode 8.1 / Swift 3.0.1 
+
 #### 2.1.8 (10-Oct-2016)
 - Cocoapods searchability
 - documentation moved to /documentation directory

@@ -26,6 +26,7 @@ You can find your client-ID and client-Secret in your [account overview](http://
   
 >Example:
 >Initialize the SDK in your appdelegate in the `didFinishLaunchingWithOptions` method as follows:
+>
 ```swift
   //Swift
   func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
