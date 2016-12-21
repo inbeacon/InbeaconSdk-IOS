@@ -11,7 +11,7 @@ it, add the following line to your Podfile: (use version 2.0.x for xCode 7, 2.1.
 	pod "InbeaconSdk", '~> 2.1'  
 	```
 
-1. Get your `client-ID` and `client-Secret` from your [inBeacon account page](https://console.inbeacon.nl/accmgr) and use these  credentials to configure your app.
+1. Get your `client-ID` and `client-Secret` from your [inBeacon account page](https://console.inbeacon.nl/account) and use these  credentials to configure your app.
 
 
 1.   Add a text item `NSLocationAlwaysUsageDescription` to the custom iOS target Properties in your plist "info" section.
