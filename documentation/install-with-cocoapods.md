@@ -26,17 +26,23 @@ Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application set
 
 ## Add descriptions for use of Location
 
-  Add two text items to the custom target info.
 
-  >Note
+
+  >Note:
   >Without these, the app never asks for permission to use location and inBeacon won’t function !
-
+  
+  Add text items to the custom target info.
+  
   ![image alt text](image_5.png)
 
   Add: **NSLocationAlwaysUsageDescription**   
 
   Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
 
+  Add: **NSBluetoothPeripheralUsageDescription**
+  
+  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
+  
   Optionally add: **NSLocationWhenInUseUsageDescription**  
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.

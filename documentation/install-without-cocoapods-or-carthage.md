@@ -12,16 +12,20 @@
 
 Drag the framework to your project and make sure the framework is embedded, as it is a dynamic framework. Dragging it from your project list to the "embedded binaries" chapter is sufficient as this automatically adds it to the linked-framework-and-libraries chapter
 
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_9.png)
+  ![image alt text](image_9.png)
 
 ### Add descriptions for use of Location
 >Without this description, the app never asks for permission to use location and inBeacon won’t function!
 
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_10.png)
+![image alt text](image_10.png)
 
 Add: `NSLocationAlwaysUsageDescription`   
 
 Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
+
+Add: `NSBluetoothPeripheralUsageDescription`
+  
+  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
 
 Optionally, add: `NSLocationWhenInUseUsageDescription`
 

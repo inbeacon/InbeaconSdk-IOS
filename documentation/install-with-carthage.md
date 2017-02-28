@@ -13,7 +13,7 @@ Drag the framework to your project and make sure the framework is embedded, as i
 
 ## Add descriptions for use of Location
 
-  Add two text items to the custom target info.
+  Add text items to the custom target info.
   >Note
   >Without these, the app never asks for permission to use location and inBeacon won’t function!
 
@@ -22,6 +22,11 @@ Drag the framework to your project and make sure the framework is embedded, as i
   Add: **NSLocationAlwaysUsageDescription**   
 
   Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
+  
+  Add: **NSBluetoothPeripheralUsageDescription**
+  
+  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. Standard text: "to check your bluetooth status"
+  
 
   Optional:**NSLocationWhenInUseUsageDescription**  
 
