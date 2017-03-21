@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // OPTIONAL: chance the logging level 0=verbose, 1=debug, 2=info, 3=warning, 4=error 5=severe(default) 6=none
-        InbeaconSdk.sharedInstance.logLevel = .verbose
+        InbeaconSdk.sharedInstance.logLevel = .error
         
         // REQUIRED: initialize InbeaconSdk with credentials
         let inbeaconInstance = InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")

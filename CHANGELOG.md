@@ -1,3 +1,10 @@
+#### 2.1.10 (21-Mar-2017)
+- Lowered minimum deployment target to iOS 8.0
+ 
+
+#### 2.1.10 (21-Mar-2017)
+- 
+
 #### 2.1.9 (10-Nov-2016)
 - xCode 8.1 / Swift 3.0.1 
 

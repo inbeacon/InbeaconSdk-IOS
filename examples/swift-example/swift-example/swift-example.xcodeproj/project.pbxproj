@@ -13,8 +13,6 @@
 		EB224CB11CA0B75E00BAB5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB01CA0B75E00BAB5B5 /* Assets.xcassets */; };
 		EB224CB41CA0B75E00BAB5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB21CA0B75E00BAB5B5 /* LaunchScreen.storyboard */; };
 		EB224CBF1CA0B75E00BAB5B5 /* swift_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB224CBE1CA0B75E00BAB5B5 /* swift_testTests.swift */; };
-		EB3B108D1D29D633007A7276 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3B108C1D29D633007A7276 /* InbeaconSdk.framework */; };
-		EB3B108E1D29D64A007A7276 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB3B108C1D29D633007A7276 /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB5187C71D2AC2B000DD3632 /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B11D2AC2B000DD3632 /* ascendent.caf */; };
 		EB5187C81D2AC2B000DD3632 /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B21D2AC2B000DD3632 /* attention.caf */; };
 		EB5187C91D2AC2B000DD3632 /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B31D2AC2B000DD3632 /* bling.caf */; };
@@ -29,6 +27,8 @@
 		EB5187D81D2AC2B100DD3632 /* oldhorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C21D2AC2B000DD3632 /* oldhorn.caf */; };
 		EB5187D91D2AC2B100DD3632 /* pop.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C31D2AC2B000DD3632 /* pop.caf */; };
 		EB5187DB1D2AC2B100DD3632 /* sadtrombone.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */; };
+		EBA1F4731E814AB90041EA0D /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA1F4721E814AB90041EA0D /* InbeaconSdk.framework */; };
+		EBA1F4741E814AB90041EA0D /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBA1F4721E814AB90041EA0D /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB224CCD1CA0B7FC00BAB5B5 /* Embed Frameworks */ = {
+		EBA1F4751E814AB90041EA0D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB3B108E1D29D64A007A7276 /* InbeaconSdk.framework in Embed Frameworks */,
+				EBA1F4741E814AB90041EA0D /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,6 @@
 		EB224CBA1CA0B75E00BAB5B5 /* swift-example.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-example.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB224CBE1CA0B75E00BAB5B5 /* swift_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_testTests.swift; sourceTree = "<group>"; };
 		EB224CC01CA0B75E00BAB5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB3B108C1D29D633007A7276 /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EB5187B11D2AC2B000DD3632 /* ascendent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ascendent.caf; sourceTree = "<group>"; };
 		EB5187B21D2AC2B000DD3632 /* attention.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attention.caf; sourceTree = "<group>"; };
 		EB5187B31D2AC2B000DD3632 /* bling.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bling.caf; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		EB5187C21D2AC2B000DD3632 /* oldhorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oldhorn.caf; sourceTree = "<group>"; };
 		EB5187C31D2AC2B000DD3632 /* pop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop.caf; sourceTree = "<group>"; };
 		EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sadtrombone.caf; sourceTree = "<group>"; };
+		EBA1F4721E814AB90041EA0D /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB3B108D1D29D633007A7276 /* InbeaconSdk.framework in Frameworks */,
+				EBA1F4731E814AB90041EA0D /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		EB224C9D1CA0B75E00BAB5B5 = {
 			isa = PBXGroup;
 			children = (
-				EB3B108C1D29D633007A7276 /* InbeaconSdk.framework */,
+				EBA1F4721E814AB90041EA0D /* InbeaconSdk.framework */,
 				EB224CA81CA0B75E00BAB5B5 /* swift-example */,
 				EB224CBD1CA0B75E00BAB5B5 /* swift-exampleTests */,
 				EB224CA71CA0B75E00BAB5B5 /* Products */,
@@ -176,7 +176,7 @@
 				EB224CA21CA0B75E00BAB5B5 /* Sources */,
 				EB224CA31CA0B75E00BAB5B5 /* Frameworks */,
 				EB224CA41CA0B75E00BAB5B5 /* Resources */,
-				EB224CCD1CA0B7FC00BAB5B5 /* Embed Frameworks */,
+				EBA1F4751E814AB90041EA0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +219,7 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = P7VV72C239;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -424,15 +425,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P7VV72C239;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "swift-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.innovader.swift-example";
 				PRODUCT_NAME = "swift-example";
+				PROVISIONING_PROFILE = "d7b64f1b-3784-47ae-beb0-2e0c6eac95a2";
+				PROVISIONING_PROFILE_SPECIFIER = XCWildcard_development_20161118;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -441,15 +446,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P7VV72C239;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "swift-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.innovader.swift-example";
 				PRODUCT_NAME = "swift-example";
+				PROVISIONING_PROFILE = "d7b64f1b-3784-47ae-beb0-2e0c6eac95a2";
+				PROVISIONING_PROFILE_SPECIFIER = XCWildcard_development_20161118;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

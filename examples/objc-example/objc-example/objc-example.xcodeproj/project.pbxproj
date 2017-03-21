@@ -15,8 +15,6 @@
 		EB51884E1D2FDDE000DD3632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB51884C1D2FDDE000DD3632 /* LaunchScreen.storyboard */; };
 		EB5188591D2FDDE000DD3632 /* objc_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5188581D2FDDE000DD3632 /* objc_exampleTests.m */; };
 		EB5188641D2FDDE000DD3632 /* objc_exampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5188631D2FDDE000DD3632 /* objc_exampleUITests.m */; };
-		EB5188731D2FDE0600DD3632 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */; };
-		EB5188741D2FDE0600DD3632 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */; };
 		EB5188951D2FF27300DD3632 /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB51888A1D2FF27300DD3632 /* ascendent.caf */; };
 		EB5188961D2FF27300DD3632 /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB51888B1D2FF27300DD3632 /* attention.caf */; };
 		EB5188971D2FF27300DD3632 /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB51888C1D2FF27300DD3632 /* bling.caf */; };
@@ -28,8 +26,8 @@
 		EB51889D1D2FF27300DD3632 /* littledwarf.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188921D2FF27300DD3632 /* littledwarf.caf */; };
 		EB51889E1D2FF27300DD3632 /* metal.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188931D2FF27300DD3632 /* metal.caf */; };
 		EB51889F1D2FF27300DD3632 /* morning.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188941D2FF27300DD3632 /* morning.caf */; };
-		EB5188A01D2FF75000DD3632 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */; };
-		EB5188A11D2FF75000DD3632 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBE07A3C1E66E19200BF2F2A /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */; };
+		EBE07A3D1E66E19200BF2F2A /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB5188A11D2FF75000DD3632 /* InbeaconSdk.framework in Embed Frameworks */,
+				EBE07A3D1E66E19200BF2F2A /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +78,6 @@
 		EB51885F1D2FDDE000DD3632 /* objc-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5188631D2FDDE000DD3632 /* objc_exampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_exampleUITests.m; sourceTree = "<group>"; };
 		EB5188651D2FDDE000DD3632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EB51888A1D2FF27300DD3632 /* ascendent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ascendent.caf; sourceTree = "<group>"; };
 		EB51888B1D2FF27300DD3632 /* attention.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attention.caf; sourceTree = "<group>"; };
 		EB51888C1D2FF27300DD3632 /* bling.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bling.caf; sourceTree = "<group>"; };
@@ -92,6 +89,7 @@
 		EB5188921D2FF27300DD3632 /* littledwarf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = littledwarf.caf; sourceTree = "<group>"; };
 		EB5188931D2FF27300DD3632 /* metal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = metal.caf; sourceTree = "<group>"; };
 		EB5188941D2FF27300DD3632 /* morning.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = morning.caf; sourceTree = "<group>"; };
+		EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5188A01D2FF75000DD3632 /* InbeaconSdk.framework in Frameworks */,
+				EBE07A3C1E66E19200BF2F2A /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5188731D2FDE0600DD3632 /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5188741D2FDE0600DD3632 /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,11 +132,11 @@
 				EB5188921D2FF27300DD3632 /* littledwarf.caf */,
 				EB5188931D2FF27300DD3632 /* metal.caf */,
 				EB5188941D2FF27300DD3632 /* morning.caf */,
-				EB5188711D2FDE0600DD3632 /* InbeaconSdk.framework */,
 				EB51883D1D2FDDE000DD3632 /* objc-example */,
 				EB5188571D2FDDE000DD3632 /* objc-exampleTests */,
 				EB5188621D2FDDE000DD3632 /* objc-exampleUITests */,
 				EB51883C1D2FDDE000DD3632 /* Products */,
+				EB7F2B491E65C28100A7265E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +190,14 @@
 				EB5188651D2FDDE000DD3632 /* Info.plist */,
 			);
 			path = "objc-exampleUITests";
+			sourceTree = "<group>";
+		};
+		EB7F2B491E65C28100A7265E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
