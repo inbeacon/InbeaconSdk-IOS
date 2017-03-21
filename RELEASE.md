@@ -1,3 +1,3 @@
-#### 2.1.11 (21-Mar-2017)
-- cocoapod deployment target auto-sync with framework deployment target
- 
+#### 2.1.12 (21-Mar-2017)
+- version bump
+
