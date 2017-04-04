@@ -44,10 +44,15 @@ Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application set
   Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
   
   Optionally add: **NSLocationWhenInUseUsageDescription**  
+  
+  >IMPORTANT:
+  >If your app calls *request​When​In​Use​Authorization()* itself, please change this into *requestAlwaysAuthorization()* as this might interfere with the request from the SDK.
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
 
   ![image alt text](image_6.png)
+  
+
 
 ## Full background mode for location updates 
   > Only when using full-background mode
@@ -61,11 +66,11 @@ Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application set
   >Note
   >Do NOT turn background mode ON when operating in Restricted-background-mode or Geofenced Location Authorisation mode.  Use this only when running the app in full-background mode for proximity ranging purposes.
 
-## Embedded content contains swift code 
-  > xCode 7, only when using objective-c 
+## Extra build options for objective-c projects 
 
-  The inBeacon SDK is a dynamic swift framework, and for objective-C projects, you need to set the "embedded content contains swift code" flag to ON
+  The inBeacon SDK is a dynamic swift framework, and for objective-C projects, you need to set the "Always embed swift standard libraries" (xCode 8) or "embedded content contains swift code" (xCode 7) flag to "Yes"
 
+  ![image alt text](image_17.png)
   ![image alt text](image_8.png)
 
 
