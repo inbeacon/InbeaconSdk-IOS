@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     // called whenever the serverside updates information
     @objc func userInfoUpdated(_ notification: Notification) {
-        guard let userInfo:Dictionary<String,String?> = ((notification as NSNotification).userInfo as? Dictionary<String,String?>) else {
+        guard let userInfo:Dictionary<String,String?> = ((notification as NSNotification).userInfo as NSDictionary? as? Dictionary<String,String?>) else {
             return
         }
         switch (userInfo["key"] ?? "")! as String {
