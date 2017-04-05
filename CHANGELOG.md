@@ -1,3 +1,7 @@
+#### 2.1.15 (05-Apr-2017)
+- postponed requestAlwaysAuthorization when it could not be asked (because of a pending requestWhenInUseAuthorization)
+
+
 #### 2.1.14 (04-Apr-2017)
 - synchronize with backend on permission change events
 
