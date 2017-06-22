@@ -1,4 +1,4 @@
-#### 2.1.16 (19-Apr-2017)
-- Version generated with XCode 8.3.2
-
+#### 2.1.17 (22-Jun-2017)
+- triggerCustomEvent / POI system included
+- xCode 8.3.3
  

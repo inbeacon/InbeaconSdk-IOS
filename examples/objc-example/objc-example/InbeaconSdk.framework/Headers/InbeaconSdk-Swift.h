@@ -192,6 +192,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) InbeaconSdk * _Nonnull
 - (NSString * _Nullable)settingForKey:(NSString * _Nonnull)setting SWIFT_WARN_UNUSED_RESULT;
 - (id _Nullable)setting:(NSString * _Nonnull)setting SWIFT_WARN_UNUSED_RESULT;
 - (void)setEndpoint:(enum InbEndpoint)endpoint;
+- (void)triggerCustomEventId:(NSInteger)id io:(NSString * _Nonnull)ioType extra:(NSString * _Nonnull)extra;
 - (NSError * _Nullable)checkCapabilitiesAndRights SWIFT_WARN_UNUSED_RESULT;
 - (void)checkCapabilitiesAndRightsWithAlert;
 - (void)modalclickWithClosebar:(BOOL)doclosebar doUpperThird:(BOOL)doUpperThird;

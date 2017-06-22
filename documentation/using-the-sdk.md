@@ -335,6 +335,61 @@ InbeaconSdk.sharedInstance.checkCapabilitiesAndRightsWithAlert()
 [InbeaconSdk.sharedInstance checkCapabilitiesAndRightsWithAlert];
 ```
 
+## Sending custom events or touchpoints
+
+The SDK supports custom events. For example these can be used for:
+
+* custom spot types that generate events just like beacons or geofences
+* other types of events, for instance certain user actions inside the app
+
+Different event-types are supported:
+
+- eventtype **ONESHOT**. ("io") For unrelated events, a oneshot event is not connected to other events, and no time-spend is calculated.
+- eventtype **IN** ("i") and **OUT** ("o"). For in/out eventtypes, a time-spend is calculated for example to measure dwell times. Also the in and out events are connected and kept for "currently in" and "currently not in" status calculation based on the eventID. A device can be inside more than one eventID at the same time.
+
+Custom events can be used in the campaign designer and are stored as touchpoints and can be used in touchpoint analysis.
+
+A custom event has 3 properties:
+
+- an ID. The eventID should be defined in the inbeacon backend, otherwise triggering it will be ignored.
+- an eventType, which can be IN, OUT or ONESHOT. 
+- (optional) extra data. This is a string with extra data for custom purposes to give more context.
+
+#### Triggering (sending) a custom event
+There are 2 ways to trigger a custom event: Via an SDK method or with a notification
+
+##### via an SDK method: triggerCustomEvent()
+
+```swift
+func triggerCustomEvent(id: Int, ioType: String, extra: String) 
+```
+>Example: 
+>
+```swift
+InbeaconSdk.sharedInstance.triggerCustomEvent(id: 44, 
+												ioType: "i", // i,o or io
+												extra: "extradata");
+```
+
+##### via a notification
+>Example:
+>
+```swift
+	//Swift
+   NotificationCenter.default.post(
+    		name: Notification.Name(rawValue: "inb:customevent"), 
+    		object: nil, 
+    		userInfo: ["id":"44", "io": "i" ,"extra": "extradata"]
+	)
+```
+```objc
+	// Objective-C
+   [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"inb:customevent"
+     object:self
+     userInfo: @{@"id":@"44", @"io":@"i", @"extra":@"extradata"} ];
+```    
+
 ## SDK events
 
 The SDK sends notifications using the NSNotification mechanism. You can receive these events by creating an observer to the event, example:
