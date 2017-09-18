@@ -32,10 +32,6 @@
 	<string>location information in the background is needed to detect iBeacons. </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>location information in the foreground is needed to detect geofences when the app becomes active</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

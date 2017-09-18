@@ -16,14 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    InbeaconSdk.sharedInstance.logLevel = InbLogLevelDebug;
+    // OPTIONAL: chance the logging level InbLogLevelVerbose, InbLogLevelDebug, InbLogLevelInfo, InbLogLevelWarning, InbLogLevelError, InbLogLevelSevere(default) or InbLogLevelNone
+    InbeaconSdk.sharedInstance.logLevel = InbLogLevelInfo;
     
+    // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
     InbeaconSdk *inbeacon=[InbeaconSdk createWithClientID: @"demo" andClientSecret: @"QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng"];
     
+    // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
     inbeacon.IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 
     return YES;
+}
+
+// REQUIRED: Need to catch local notifications.
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [InbeaconSdk.sharedInstance didReceiveLocalNotification:notification];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
