@@ -28,7 +28,7 @@ When the SDK is running in  "Selective Location Authorisation" mode, this messag
 
 There are three fundamentally different ways to run the inBeacon SDK:
 
-#### Restricted background mode
+#### Restricted background mode (default)
 
 This means that if a user is moving around within a (beacon) region more than 3 minutes after entering the region, triggers will no longer work when the app is in the background.
 

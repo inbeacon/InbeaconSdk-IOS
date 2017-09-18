@@ -2,8 +2,15 @@
 
 ## Add the inbeacon SDK to your Cartfile 
 ```ruby
-github "inbeacon/InbeaconSdk-IOS" ~>2.0
+github "inbeacon/InbeaconSdk-IOS" ~>2.2
 ```
+
+> Xcode 9: version ~> 2.2
+
+> Xcode 8: version ~> 2.1
+
+> Xcode 7: version ~> 2.0
+
 And run `carthage update`. This will update the universal InbeaconSdk-IOS framework in the Carthage checkouts directory.
 
 ## Add the framework to your project
