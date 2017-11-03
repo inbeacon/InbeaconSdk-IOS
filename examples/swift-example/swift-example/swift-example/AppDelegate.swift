@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let inbeaconInstance = InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
         
         // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
-        inbeaconInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier?.uuidString
+        inbeaconInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
         
         return true
     }

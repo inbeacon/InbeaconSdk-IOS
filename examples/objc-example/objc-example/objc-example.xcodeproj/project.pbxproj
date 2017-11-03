@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1F83381FAD116900876016 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1F83361FAD116200876016 /* InbeaconSdk.framework */; };
+		EB1F83391FAD116900876016 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB1F83361FAD116200876016 /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB5188401D2FDDE000DD3632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51883F1D2FDDE000DD3632 /* main.m */; };
 		EB5188431D2FDDE000DD3632 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5188421D2FDDE000DD3632 /* AppDelegate.m */; };
 		EB5188461D2FDDE000DD3632 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5188451D2FDDE000DD3632 /* ViewController.m */; };
@@ -26,8 +28,6 @@
 		EB51889D1D2FF27300DD3632 /* littledwarf.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188921D2FF27300DD3632 /* littledwarf.caf */; };
 		EB51889E1D2FF27300DD3632 /* metal.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188931D2FF27300DD3632 /* metal.caf */; };
 		EB51889F1D2FF27300DD3632 /* morning.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5188941D2FF27300DD3632 /* morning.caf */; };
-		EBE07A3C1E66E19200BF2F2A /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */; };
-		EBE07A3D1E66E19200BF2F2A /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB5188871D2FECCF00DD3632 /* Embed Frameworks */ = {
+		EB1F833A1FAD116900876016 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EBE07A3D1E66E19200BF2F2A /* InbeaconSdk.framework in Embed Frameworks */,
+				EB1F83391FAD116900876016 /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB1F83361FAD116200876016 /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EB51883B1D2FDDE000DD3632 /* objc-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB51883F1D2FDDE000DD3632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB5188411D2FDDE000DD3632 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		EB5188921D2FF27300DD3632 /* littledwarf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = littledwarf.caf; sourceTree = "<group>"; };
 		EB5188931D2FF27300DD3632 /* metal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = metal.caf; sourceTree = "<group>"; };
 		EB5188941D2FF27300DD3632 /* morning.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = morning.caf; sourceTree = "<group>"; };
-		EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE07A3C1E66E19200BF2F2A /* InbeaconSdk.framework in Frameworks */,
+				EB1F83381FAD116900876016 /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +195,7 @@
 		EB7F2B491E65C28100A7265E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EBE07A3B1E66E19200BF2F2A /* InbeaconSdk.framework */,
+				EB1F83361FAD116200876016 /* InbeaconSdk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				EB5188381D2FDDE000DD3632 /* Frameworks */,
 				EB5188391D2FDDE000DD3632 /* Resources */,
 				EB5188751D2FDE3C00DD3632 /* Headers */,
-				EB5188871D2FECCF00DD3632 /* Embed Frameworks */,
+				EB1F833A1FAD116900876016 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,7 +513,6 @@
 		EB5188691D2FDDE000DD3632 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -535,7 +534,6 @@
 		EB51886A1D2FDDE000DD3632 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

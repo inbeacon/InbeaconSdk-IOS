@@ -8,17 +8,26 @@
 
 import UIKit
 import InbeaconSdk
+import CoreLocation
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var usernameEdit: UITextField!
     @IBOutlet weak var emailEdit: UITextField!
-
+    
+    var locationManager: CLLocationManager? = nil
+    
     // EXAMPLE: Working with persisted and synchronized backend user data
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        // Optional: Request Authorization for using location.
+        // You might ask for AlwaysAuthorization or start of with requestWhenInUseAuthorization
+        // The InbeaconSDK will always ask for AlwaysAuthorization later.
+        //locationManager = CLLocationManager()
+        //locationManager?.requestAlwaysAuthorization()   // Optional.
+        
         // initialize with existing (persisted) userinfo
         usernameEdit.text = InbeaconSdk.sharedInstance.user["name"] ?? ""
         emailEdit.text =  InbeaconSdk.sharedInstance.user["email"] ?? ""

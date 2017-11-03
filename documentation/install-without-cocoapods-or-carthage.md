@@ -14,28 +14,33 @@ Drag the framework to your project and make sure the framework is embedded, as i
 
   ![image alt text](image_9.png)
 
-### Add descriptions for use of Location
->Without this description, the app never asks for permission to use location and inBeacon won’t function!
+## Add descriptions for use of Location 
 
-![image alt text](image_10.png)
+  >Note:
+  >Without these, the app never asks for permission to use location and inBeacon won’t function !
+  
+  Add 4 Privacy - text items to the custom target info.
+  
+  ![image alt text](image_18.png)
 
-Add: `NSLocationAlwaysUsageDescription`   
+  Add: **Privacy - Location Always Usage Description**  (**NSLocationAlwaysUsageDescription**) 
 
-Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is a permission needed to use the inBeacon SDK)
 
-Add: `NSBluetoothPeripheralUsageDescription`
+  Add: **Privacy - Location Always and When In Use Usage Description**   
+
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission with the option of allowing when-in-use. (this is a permission needed to use the inBeacon SDK)
+  
+  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
   
   Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
+  
+  add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 
-Optionally, add: `NSLocationWhenInUseUsageDescription`
+  Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
 
-  >IMPORTANT:
-  >If your app calls *request​When​In​Use​Authorization()* itself, please change this into *requestAlwaysAuthorization()* as this might interfere with the request from the SDK.
-
-
-Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
-
-![image alt text](image_11.png)
+  ![image alt text](image_6.png)
+    
 
 ## Bundle resources for customized notification sounds
 

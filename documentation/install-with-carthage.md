@@ -18,32 +18,33 @@ Drag the framework to your project and make sure the framework is embedded, as i
 
   ![image alt text](image_9.png)
 
-## Add descriptions for use of Location
+## Add descriptions for use of Location 
 
-  Add text items to the custom target info.
-  >Note
-  >Without these, the app never asks for permission to use location and inBeacon won’t function!
-
-  ![image alt text](image_10.png)
-
-  Add: **NSLocationAlwaysUsageDescription**   
-
-  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
+  >Note:
+  >Without these, the app never asks for permission to use location and inBeacon won’t function !
   
-  Add: **NSBluetoothPeripheralUsageDescription**
+  Add 4 Privacy - text items to the custom target info.
   
-  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. Standard text: "to check your bluetooth status"
-  
+  ![image alt text](image_18.png)
 
-  Optional:**NSLocationWhenInUseUsageDescription** 
+  Add: **Privacy - Location Always Usage Description**  (**NSLocationAlwaysUsageDescription**) 
+
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is a permission needed to use the inBeacon SDK)
+
+  Add: **Privacy - Location Always and When In Use Usage Description**   
+
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission with the option of allowing when-in-use. (this is a permission needed to use the inBeacon SDK)
   
->IMPORTANT:
->If your app calls *request​When​In​Use​Authorization()* itself, please change this into *requestAlwaysAuthorization()* as this might interfere with the request from the SDK.
- 
+  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
+  
+  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
+  
+  add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
 
-  ![image alt text](image_11.png)
+  ![image alt text](image_6.png)
+    
 
 ## Bundle resources for customized notification sounds
 Customized sounds are available for local notifications. In order to use customized notification sounds, copy all files in the *./resources* directory of the SDK to your application bundle. You could do this by drag/dropping these into your "copy bundle resources" section of the Build Phases of your app:

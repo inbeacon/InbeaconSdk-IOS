@@ -27,35 +27,33 @@ Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application set
   ```
   After this run ‘pod install’ and you’re good to go.
   
-
-## Add descriptions for use of Location
-
-
+## Add descriptions for use of Location 
 
   >Note:
   >Without these, the app never asks for permission to use location and inBeacon won’t function !
   
-  Add text items to the custom target info.
+  Add 4 Privacy - text items to the custom target info.
   
-  ![image alt text](image_5.png)
+  ![image alt text](image_18.png)
 
-  Add: **NSLocationAlwaysUsageDescription**   
+  Add: **Privacy - Location Always Usage Description**  (**NSLocationAlwaysUsageDescription**) 
 
-  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is the default permission needed to use the inBeacon SDK)
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission (this is a permission needed to use the inBeacon SDK)
 
-  Add: **NSBluetoothPeripheralUsageDescription**
+  Add: **Privacy - Location Always and When In Use Usage Description**   
+
+  Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission with the option of allowing when-in-use. (this is a permission needed to use the inBeacon SDK)
+  
+  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
   
   Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
   
-  Optionally add: **NSLocationWhenInUseUsageDescription**  
-  
-  >IMPORTANT:
-  >If your app calls *request​When​In​Use​Authorization()* itself, please change this into *requestAlwaysAuthorization()* as this might interfere with the request from the SDK.
+  add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
 
   ![image alt text](image_6.png)
-  
+    
 
 
 ## Extra build options for objective-c projects 
