@@ -4,6 +4,7 @@
 
 When the SDK is integrated into an app, the app will request some permissions.  If the app already needed those permissions before integration of the SDK,  these permissions will not be requested again. These permissions are requested once after installation when the app is started (and the inBeacon SDK is initialized).
 
+
 ##### Application would like to send you notifications
 
 ![image alt text](image_1.png)
@@ -12,7 +13,10 @@ When the SDK is integrated into an app, the app will request some permissions.  
 
 ![image alt text](image_2.png)
 
-It is also possible to run the SDK in "Selective Location Authorisation" mode (SDK 1.3.5 and up). In this case the SDK asks for “when in use” access only, and asks for “even when you are not using the app” mode at the moment the campaign action “ask background location-scanning permission” is triggered. (see below)
+> Note: 
+> 
+> * The SDK can be started with **askPermissions** set to *false*. In that case the app has control over the moment the permission dialogs are shown.
+> * It is also possible to run the SDK in "Selective Location Authorisation" mode (SDK 1.3.5 and up). In this case the SDK asks for “when in use” access only, and asks for “even when you are not using the app” mode at the moment the campaign action “ask background location-scanning permission” is triggered. (see below)
 
 ##### When bluetooth is turned off:
 

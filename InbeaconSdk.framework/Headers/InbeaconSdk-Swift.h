@@ -226,6 +226,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) InbeaconSdk * _Nonnull
 /// \endcode
 @property (nonatomic, copy) NSString * _Nullable IDFA;
 @property (nonatomic) enum InbLogLevel logLevel;
+@property (nonatomic) BOOL askPermissions;
 - (NSString * _Nullable)userStringForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (NSNumber * _Nullable)userNumberForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (void)setUserString:(NSString * _Nonnull)value forKey:(NSString * _Nonnull)key;

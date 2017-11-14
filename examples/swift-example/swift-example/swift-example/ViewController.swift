@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     
         // Optional: Request Authorization for using location.
         // You might ask for AlwaysAuthorization or start of with requestWhenInUseAuthorization
-        // The InbeaconSDK will always ask for AlwaysAuthorization later.
-        //locationManager = CLLocationManager()
-        //locationManager?.requestAlwaysAuthorization()   // Optional.
+        // The InbeaconSDK will always ask for AlwaysAuthorization later (when askPermissions is true)
+        // locationManager = CLLocationManager()
+        // locationManager?.requestAlwaysAuthorization()   // Optional.
         
         // initialize with existing (persisted) userinfo
         usernameEdit.text = InbeaconSdk.sharedInstance.user["name"] ?? ""
@@ -53,6 +53,13 @@ class ViewController: UIViewController {
         // If you changed userinfo at inBeacon serverside you will get a notification (inb:userinfo)
         InbeaconSdk.sharedInstance.refresh(true)
         
+    }
+    
+    @IBAction func askPermissionsClick(_ sender: Any) {
+        // When askPermissions is set to false before initialization of the SDK
+        // it can be set to true anytime later.
+        // to test, uncomment the askPermissions = false in the AppDelegate
+        InbeaconSdk.sharedInstance.askPermissions = true
     }
     
     // called whenever the serverside updates information

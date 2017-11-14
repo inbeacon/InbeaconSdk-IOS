@@ -42,6 +42,10 @@
     // EXAMPLE: force synchronisation with backend (normally done automatically at certain interval)
     [InbeaconSdk.sharedInstance refreshWithForce:true];
 }
+- (IBAction)askForPermissionsClicked:(id)sender {
+    // when the SDK is initialized with askPermissions = NO, you can ask permissions any time later on
+    InbeaconSdk.sharedInstance.askPermissions = YES;
+}
 
 -(void)onNotification:(NSNotification*)notification {
     // EXAMPLE: Show incoming notifications (like app-event)

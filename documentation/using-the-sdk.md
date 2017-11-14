@@ -168,6 +168,49 @@ NSLog(@”Current loglevel %d”, InbeaconSdk.sharedInstance.logLevel);
 
 > You can increase the loglevel before calling `CreateWithClientID: ClientSecret:`  to see the complete logdump.
 
+### askPermissions
+By default, the SDK asks user permissions (notifications, location) immediately. However there are cases where the app wants to control the permission dialogs itself. In that case can set askPermissions to *false* just before initialization of the SDK. 
+
+The app can now ask for permissions on appropriate moments. Note that the SDK needs location **ALWAYS** authorization by calling requestAlwaysAuthorization(), otherwise beacon and geofence functionality does not work.
+
+```swift
+//Swift
+  
+// disable askPermissions, just before initializing the SDK
+InbeaconSdk.sharedInstance.askPermissions = false
+InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")  
+...
+
+// Later on, activate the SDK at any moment you like. 
+InbeaconSdk.sharedInstance.askPermissions = true
+
+// or ask for permissions yourself at an appropriate time
+let locationManager = CLLocationManager()  
+locationManager.requestAlwaysAuthorization()
+UIApplication.shared.registerUserNotificationSettings(
+    UIUserNotificationSettings.init(types: [.badge,.alert,.sound], categories: nil )
+)
+
+```
+```objc
+//Objective-C
+
+// Start SDK in de-activated mode, just before initializing the SDK
+InbeaconSdk.sharedInstance.sdkActive = false;
+InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
+...
+// Later on, activate the SDK at any moment you like
+InbeaconSdk.sharedInstance.sdkActive = true
+
+// or ask for permissions yourself at an appropriate time
+[locationManager requestWhenInUseAuthorization];
+UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert 
+      | UIUserNotificationTypeBadge 
+      | UIUserNotificationTypeSound) categories:nil];
+[application registerUserNotificationSettings:settings];
+```
+
+
 ### IDFA
 
 The IDFA ("id for advertisers") can be used if you want to add functionality like Ad-retargeting. 

@@ -13,6 +13,8 @@
 		EB224CB11CA0B75E00BAB5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB01CA0B75E00BAB5B5 /* Assets.xcassets */; };
 		EB224CB41CA0B75E00BAB5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB21CA0B75E00BAB5B5 /* LaunchScreen.storyboard */; };
 		EB224CBF1CA0B75E00BAB5B5 /* swift_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB224CBE1CA0B75E00BAB5B5 /* swift_testTests.swift */; };
+		EB32C7761FBB1CC900BC4E4B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; };
+		EB32C7781FBB1CCE00BC4E4B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB5187C71D2AC2B000DD3632 /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B11D2AC2B000DD3632 /* ascendent.caf */; };
 		EB5187C81D2AC2B000DD3632 /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B21D2AC2B000DD3632 /* attention.caf */; };
 		EB5187C91D2AC2B000DD3632 /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B31D2AC2B000DD3632 /* bling.caf */; };
@@ -27,8 +29,6 @@
 		EB5187D81D2AC2B100DD3632 /* oldhorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C21D2AC2B000DD3632 /* oldhorn.caf */; };
 		EB5187D91D2AC2B100DD3632 /* pop.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C31D2AC2B000DD3632 /* pop.caf */; };
 		EB5187DB1D2AC2B100DD3632 /* sadtrombone.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */; };
-		EBE658AD1FAD0DA90021E0F9 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE658AB1FAD0DA40021E0F9 /* InbeaconSdk.framework */; };
-		EBE658AE1FAD0DA90021E0F9 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE658AB1FAD0DA40021E0F9 /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EBA1F4751E814AB90041EA0D /* Embed Frameworks */ = {
+		EB32C7791FBB1CCE00BC4E4B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EBE658AE1FAD0DA90021E0F9 /* InbeaconSdk.framework in Embed Frameworks */,
+				EB32C7781FBB1CCE00BC4E4B /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +66,7 @@
 		EB224CBA1CA0B75E00BAB5B5 /* swift-example.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-example.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB224CBE1CA0B75E00BAB5B5 /* swift_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_testTests.swift; sourceTree = "<group>"; };
 		EB224CC01CA0B75E00BAB5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EB5187B11D2AC2B000DD3632 /* ascendent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ascendent.caf; sourceTree = "<group>"; };
 		EB5187B21D2AC2B000DD3632 /* attention.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attention.caf; sourceTree = "<group>"; };
 		EB5187B31D2AC2B000DD3632 /* bling.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bling.caf; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		EB5187C21D2AC2B000DD3632 /* oldhorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oldhorn.caf; sourceTree = "<group>"; };
 		EB5187C31D2AC2B000DD3632 /* pop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop.caf; sourceTree = "<group>"; };
 		EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sadtrombone.caf; sourceTree = "<group>"; };
-		EBE658AB1FAD0DA40021E0F9 /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InbeaconSdk.framework; path = ../../../../../Downloads/InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE658AD1FAD0DA90021E0F9 /* InbeaconSdk.framework in Frameworks */,
+				EB32C7761FBB1CC900BC4E4B /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		EB224C9D1CA0B75E00BAB5B5 = {
 			isa = PBXGroup;
 			children = (
-				EBE658AB1FAD0DA40021E0F9 /* InbeaconSdk.framework */,
+				EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */,
 				EB224CA81CA0B75E00BAB5B5 /* swift-example */,
 				EB224CBD1CA0B75E00BAB5B5 /* swift-exampleTests */,
 				EB224CA71CA0B75E00BAB5B5 /* Products */,
@@ -176,7 +176,7 @@
 				EB224CA21CA0B75E00BAB5B5 /* Sources */,
 				EB224CA31CA0B75E00BAB5B5 /* Frameworks */,
 				EB224CA41CA0B75E00BAB5B5 /* Resources */,
-				EBA1F4751E814AB90041EA0D /* Embed Frameworks */,
+				EB32C7791FBB1CCE00BC4E4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

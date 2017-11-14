@@ -16,8 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // OPTIONAL: chance the logging level InbLogLevelVerbose, InbLogLevelDebug, InbLogLevelInfo, InbLogLevelWarning, InbLogLevelError, InbLogLevelSevere(default) or InbLogLevelNone
-    InbeaconSdk.sharedInstance.logLevel = InbLogLevelInfo;
+    // InbeaconSdk.sharedInstance.logLevel = InbLogLevelInfo;
+    
+    // OPTIONAL: postpone asking for permissions
+    // InbeaconSdk.sharedInstance.askPermissions = NO;
     
     // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
     InbeaconSdk *inbeacon=[InbeaconSdk createWithClientID: @"demo" andClientSecret: @"QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng"];
