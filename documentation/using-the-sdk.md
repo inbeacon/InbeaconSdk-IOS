@@ -169,7 +169,7 @@ NSLog(@”Current loglevel %d”, InbeaconSdk.sharedInstance.logLevel);
 > You can increase the loglevel before calling `CreateWithClientID: ClientSecret:`  to see the complete logdump.
 
 ### askPermissions
-By default, the SDK asks user permissions (notifications, location) immediately. However there are cases where the app wants to control the permission dialogs itself. In that case can set askPermissions to *false* just before initialization of the SDK. 
+By default, the SDK asks user permissions (notifications, location) immediately. However there are cases where the app wants to control the permission dialogs itself. In that case you can set askPermissions to *false* just before initialization of the SDK. 
 
 The app can now ask for permissions on appropriate moments. Note that the SDK needs location **ALWAYS** authorization by calling requestAlwaysAuthorization(), otherwise beacon and geofence functionality does not work.
 
@@ -179,9 +179,11 @@ The app can now ask for permissions on appropriate moments. Note that the SDK ne
 // disable askPermissions, just before initializing the SDK
 InbeaconSdk.sharedInstance.askPermissions = false
 InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")  
+
 ...
 
-// Later on, activate the SDK at any moment you like. 
+// Later on, ask user permissions at any moment you like. 
+// Doing this will ask the user for notification and location permissions immediately
 InbeaconSdk.sharedInstance.askPermissions = true
 
 // or ask for permissions yourself at an appropriate time
@@ -198,8 +200,11 @@ UIApplication.shared.registerUserNotificationSettings(
 // disable askPermissions, just before initializing the SDK
 InbeaconSdk.sharedInstance.askPermissions = false;
 InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
+
 ...
-// Later on, activate the SDK at any moment you like
+
+// Later on, ask user permissions at any moment you like. 
+// Doing this will ask the user for notification and location permissions immediately
 InbeaconSdk.sharedInstance.askPermissions = true
 
 // or ask for permissions yourself at an appropriate time
@@ -209,7 +214,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
       | UIUserNotificationTypeSound) categories:nil];
 [application registerUserNotificationSettings:settings];
 ```
-
+> Apple allows the app to ask user permissions only once. After this is done, the setting of askPermissions does not matter any more.
 
 ### IDFA
 
