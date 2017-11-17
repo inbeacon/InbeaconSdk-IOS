@@ -178,7 +178,7 @@ The app can now ask for permissions on appropriate moments. Note that the SDK ne
   
 // disable askPermissions, just before initializing the SDK
 InbeaconSdk.sharedInstance.askPermissions = false
-InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")  
+InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret: "<your client-secret>")  
 ...
 
 // Later on, activate the SDK at any moment you like. 
@@ -197,7 +197,8 @@ UIApplication.shared.registerUserNotificationSettings(
 
 // disable askPermissions, just before initializing the SDK
 InbeaconSdk.sharedInstance.askPermissions = false;
-InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
+InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret: "<your client-secret>")
+
 ...
 // Later on, activate the SDK at any moment you like
 InbeaconSdk.sharedInstance.askPermissions = true
