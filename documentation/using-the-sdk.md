@@ -195,7 +195,7 @@ UIApplication.shared.registerUserNotificationSettings(
 ```objc
 //Objective-C
 
-// Start SDK in de-activated mode, just before initializing the SDK
+// disable askPermissions, just before initializing the SDK
 InbeaconSdk.sharedInstance.askPermissions = false;
 InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
 ...
