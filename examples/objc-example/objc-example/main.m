@@ -2,8 +2,8 @@
 //  main.m
 //  objc-example
 //
-//  Created by rvw on 8-7-16.
-//  Copyright © 2016 inBeacon. All rights reserved.
+//  Created by rvw on 13-03-2018.
+//  Copyright © 2018 rvw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

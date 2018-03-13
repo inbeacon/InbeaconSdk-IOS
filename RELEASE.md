@@ -1,3 +1,2 @@
-#### 2.2.06 (13-Mar-2018)
-- Fresh obj-c example with Xcode 9.2
- 
+#### 2.2.07 (13-Mar-2018)
+- new objc-example 
