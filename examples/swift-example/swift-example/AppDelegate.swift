@@ -9,9 +9,10 @@
 import UIKit
 import InbeaconSdk
 import AdSupport
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -25,31 +26,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // InbeaconSdk.sharedInstance.askPermissions = false
         
         // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
-        let inbeaconInstance = InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
+        //InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
+        InbeaconSdk.createWith(clientId: "yqjoG98S", clientSecret:   "TjZZUHlra0RQT3NBT0JGNjlLUFpLcEZDczFnMUU2WU4") // ronaldtest
         
         // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
-        inbeaconInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        InbeaconSdk.sharedInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
         
+        // REQUIRED need a delegate for the UserNotificationCenter (as of iOS 10.0)
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+        }
         return true
     }
     
-    // REQUIRED: Need to catch local notifications. 
-    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        print("SwiftApp ------------------------------> didreceivelocalnotification")
-        
-        // REQUIRED: didReceiveLocalNotification to InbeaconSdk
-        InbeaconSdk.sharedInstance
-            .didReceiveLocalNotification(notification)
+    // REQUIRED handling usernotifications
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
+            // notification not handled by inBeaconSDK
+            // do your own handling here
+        }
+        completionHandler()
     }
-    
-    // REQUIRED WITH UserNotifications framework - use this code instead (in your UNUserNotificationCenter delegate)
-    //    func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-    //        //
-    //        if !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
-    //          // notification not handled by inBeaconSDK
-    //        }
-    //        completionHandler()
-    //    }
+    // RECOMMENDED show alert and sound even when app is in foreground
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // called before notification is shown
+        completionHandler([.badge, .alert, .sound])
+    }
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

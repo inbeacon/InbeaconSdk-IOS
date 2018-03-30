@@ -13,8 +13,8 @@
 		EB224CB11CA0B75E00BAB5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB01CA0B75E00BAB5B5 /* Assets.xcassets */; };
 		EB224CB41CA0B75E00BAB5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB224CB21CA0B75E00BAB5B5 /* LaunchScreen.storyboard */; };
 		EB224CBF1CA0B75E00BAB5B5 /* swift_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB224CBE1CA0B75E00BAB5B5 /* swift_testTests.swift */; };
-		EB32C7761FBB1CC900BC4E4B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; };
-		EB32C7781FBB1CCE00BC4E4B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB447E43206E8C9D00BEB852 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; };
+		EB447E44206E8C9D00BEB852 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB32C7751FBB1CC900BC4E4B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB5187C71D2AC2B000DD3632 /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B11D2AC2B000DD3632 /* ascendent.caf */; };
 		EB5187C81D2AC2B000DD3632 /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B21D2AC2B000DD3632 /* attention.caf */; };
 		EB5187C91D2AC2B000DD3632 /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187B31D2AC2B000DD3632 /* bling.caf */; };
@@ -42,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB32C7791FBB1CCE00BC4E4B /* Embed Frameworks */ = {
+		EB447E45206E8C9D00BEB852 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB32C7781FBB1CCE00BC4E4B /* InbeaconSdk.framework in Embed Frameworks */,
+				EB447E44206E8C9D00BEB852 /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB32C7761FBB1CC900BC4E4B /* InbeaconSdk.framework in Frameworks */,
+				EB447E43206E8C9D00BEB852 /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 				EB224CA21CA0B75E00BAB5B5 /* Sources */,
 				EB224CA31CA0B75E00BAB5B5 /* Frameworks */,
 				EB224CA41CA0B75E00BAB5B5 /* Resources */,
-				EB32C7791FBB1CCE00BC4E4B /* Embed Frameworks */,
+				EB447E45206E8C9D00BEB852 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = inBeacon;
 				TargetAttributes = {
 					EB224CA51CA0B75E00BAB5B5 = {
@@ -347,12 +347,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -379,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -399,12 +401,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -425,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -448,8 +452,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.innovader.swift-example";
 				PRODUCT_NAME = "swift-example";
-				PROVISIONING_PROFILE = "d7b64f1b-3784-47ae-beb0-2e0c6eac95a2";
-				PROVISIONING_PROFILE_SPECIFIER = XCWildcard_development_20161118;
+				PROVISIONING_PROFILE = "e334dafd-5685-4cc0-ab30-5a34d1c61943";
+				PROVISIONING_PROFILE_SPECIFIER = "innovader wildcard 03-2018";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -470,8 +474,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.innovader.swift-example";
 				PRODUCT_NAME = "swift-example";
-				PROVISIONING_PROFILE = "d7b64f1b-3784-47ae-beb0-2e0c6eac95a2";
-				PROVISIONING_PROFILE_SPECIFIER = XCWildcard_development_20161118;
+				PROVISIONING_PROFILE = "e334dafd-5685-4cc0-ab30-5a34d1c61943";
+				PROVISIONING_PROFILE_SPECIFIER = "innovader wildcard 03-2018";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
