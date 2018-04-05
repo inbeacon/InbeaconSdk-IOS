@@ -2,8 +2,9 @@
 
 ## Add the inbeacon SDK to your Cartfile 
 ```ruby
-github "inbeacon/InbeaconSdk-IOS" ~>2.2
+github "inbeacon/InbeaconSdk-IOS" ~>2.3
 ```
+> Xcode 9.3: version ~> 2.3
 
 > Xcode 9: version ~> 2.2
 
@@ -34,6 +35,9 @@ Drag the framework to your project and make sure the framework is embedded, as i
   Add: **Privacy - Location Always and When In Use Usage Description**   
 
   Text that is shown under the permission dialog when asked for "even when you are not using the app" location permission with the option of allowing when-in-use. (this is a permission needed to use the inBeacon SDK)
+    
+![image alt text](image_19.png)
+    
   
   Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
   
@@ -43,9 +47,8 @@ Drag the framework to your project and make sure the framework is embedded, as i
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
 
-  ![image alt text](image_6.png)
-    
 
+    
 ## Bundle resources for customized notification sounds
 Customized sounds are available for local notifications. In order to use customized notification sounds, copy all files in the *./resources* directory of the SDK to your application bundle. You could do this by drag/dropping these into your "copy bundle resources" section of the Build Phases of your app:
 
@@ -53,21 +56,12 @@ Customized sounds are available for local notifications. In order to use customi
 
 Customized sounds can be selected in the campaign action of the inBeacon backend console.
 
-## Full background mode for location updates 
-> Only when using full-background mode
-
-This allows ranging of beacon proximities in the background at any time, and removes the 3 minutes limit on ranging after entering a region. To switch the SDK into full background mode, you will need to add location update background mode to your info.plist / application settings:
-
-![image alt text](image_13.png)
-
->Do NOT turn background mode ON when operating in Restricted-background-mode or Geofenced Location Authorisation mode.  Use this only when running the app in full-background mode for proximity ranging purposes.
 
 
 ## Extra build options for objective-c projects 
 
-  The inBeacon SDK is a dynamic swift framework, and for objective-C projects, you need to set the "Always embed swift standard libraries" (xCode 8) or "embedded content contains swift code" (xCode 7) flag to "Yes"
+  The inBeacon SDK is a dynamic swift framework, and for objective-C projects, you need to set the "Always embed swift standard libraries"
 
   ![image alt text](image_17.png)
-  ![image alt text](image_8.png)
 
 `Previous:` [Installing the SDK](installing-the-sdk.md)   `Next:` [Using the SDK](using-the-sdk.md)

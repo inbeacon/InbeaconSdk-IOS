@@ -1,7 +1,8 @@
 ### Compile error dyld: Library not loaded
 `Compile error dyld: Library not loaded: @rpath/libswiftCore.dylib Reason: image not found`
-##### Solution:
-- Set "embedded content uses swift code" flag to YES in build settings
+##### Solutions:
+- Set "always embed swift standard libraries" flag to YES in build settings
+- Make sure you are using the correct version of the SDK that matches the XCode version
 
 ### Logging error NSLocationAlwaysUsageDescription not defined in plist
 `🔴🔴 SDK: ##########  ###### Error: NSLocationAlwaysUsageDescription not defined in plist`

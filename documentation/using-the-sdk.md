@@ -22,11 +22,11 @@ class func createWith(clientId: "<your client-ID>",clientSecret: "<your client-s
 ```
 
 Initialize the SDK with your clientID and clientSecret. These credentials are used for communication with the server.
-You can find your client-ID and client-Secret in your [account overview](http://console.inbeacon.nl/accmgr) 
+You can find your client-ID and client-Secret in your [account overview](https://console.inbeacon.nl/account) 
   
 >Example:
 >Initialize the SDK in your appdelegate in the `didFinishLaunchingWithOptions` method as follows:
->
+
 ```swift
   //Swift
   func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -52,6 +52,7 @@ InbeaconSdk.sharedInstance
 ```
 >Example:
 >increase logging by setting the loglevel to verbose:
+
 ```swift
 // Swift
 InbeaconSdk.sharedInstance.logLevel = .Verbose
@@ -61,40 +62,10 @@ InbeaconSdk.sharedInstance.logLevel = .Verbose
 InbeaconSdk.sharedInstance.logLevel = InbLogLevelVerbose;
 ```
 
-### didReceiveLocalNotification()
-You need to forward localnotifications to the inBeacon SDK by putting an extra method in your appdelegate:
-```swift
-//Swift
-func didReceiveLocalNotification(_ notification: UILocalNotification) -> Bool
-```
-```objc
-//Objective-C
-- (BOOL)didReceiveLocalNotification:(UILocalNotification *)notification
-```
->Example:
-Forward the localnotification  in your appdelegate in the didReceiveLocalNotification method as follows:
-```swift
-//Swift
-func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-    if !InbeaconSdk.sharedInstance.didReceiveLocalNotification(notification) {
-            // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-    }
-}
-```
-```objc
-//Objective-C
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-      if (![InbeaconSdk.sharedInstance didReceiveLocalNotification:notification]) {
-            // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
-      }
-  }
-```
-
-
 ### didReceiveUserNotification()
->New in xCode 8 / iOS 10
+You need to forward usernotifications to the inBeacon SDK by putting an extra method in your UserNotification delegate:
 
-Working with the new iOS 10 UserNotification framework? In that case you can replace the `didReceiveLocalNotification` as described above with a call to `didReceiveUserNotification`
+
 ```swift
 //Swift
 func didReceiveUserNotification(_ notification: UNNotification) -> Bool
@@ -105,8 +76,10 @@ func didReceiveUserNotification(_ notification: UNNotification) -> Bool
 ```
 >Example  
 >Forward the notification in your UserNotification delegate as follows:
+
 ```swift
 //Swift
+@available(iOS 10.0, *)
 func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
                   // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
@@ -122,7 +95,9 @@ func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive respon
 ```
 
 ### logLevel
-The SDK can log detailed information to the console, but the amount is controlled by the logLevel. By default, the logLevel is set to `Severe`, but you can increase the loglevel by setting it:
+The SDK can log detailed information to the console, but the amount is controlled by the logLevel. By default, the logLevel is set to `Severe`, but you can increase the loglevel by setting it.
+
+- Logging info is logged to the xcode output console and app console
 
 ```swift
 //Swift
@@ -154,9 +129,24 @@ typedef enum {
 } InbLogLevel;
 ```
 
-- Logging info is logged in the xcode output console. 
-- The logging level is persistent. It is stored on the device.
+
+
+You can increase the loglevel before calling `CreateWithClientID: ClientSecret:`  to see the complete logdump.
+
+```swift
+//Swift
+InbeaconSdk.sharedInstance.logLevel = .info
+InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")  
+```
+```objc
+//Objective-C
+InbeaconSdk.sharedInstance.logLevel = InbLogLevelInfo;
+InbeaconSdk.createWith(clientId: "<your client-ID>",clientSecret:  "<your client-secret>")
+```
+
+
 - The InbLogLevel enum is CustomStringConvertible, so with Swift  it is possible to display the value as a string:
+
 ```swift
 //Swift
 print("Current loglevel: \(InbeaconSdk.sharedInstance.logLevel)")
@@ -165,8 +155,6 @@ print("Current loglevel: \(InbeaconSdk.sharedInstance.logLevel)")
 //Objective-C
 NSLog(@”Current loglevel %d”, InbeaconSdk.sharedInstance.logLevel);
 ```
-
-> You can increase the loglevel before calling `CreateWithClientID: ClientSecret:`  to see the complete logdump.
 
 ### askPermissions
 By default, the SDK asks user permissions (notifications, location) immediately. However there are cases where the app wants to control the permission dialogs itself. In that case you can set askPermissions to *false* just before initialization of the SDK. 
@@ -282,6 +270,7 @@ NSNumber *age = [InbeaconSdk.sharedInstance userNumberForKey: @"age"]
 
 
 >When user properties change (for instance when modified on the backend or via an API REST call to the inBeacon server ), a **inb:userinfo** notification is send, which you can process like this:
+
 ```swift
 //Swift
 NSNotificationCenter.default.addObserver(self, selector: #selector(userInfoUpdated), name: 
@@ -316,6 +305,7 @@ Notification.Name(rawValue:"inb:userinfo"), object: nil)
 #### Tags
 
 For tags, separate methods are used: hasTag, setTag and resetTag.
+
 ```swift
 //Swift
 func hasTag(tag) -> Bool
@@ -372,7 +362,7 @@ A very basic method to show the user the action to take when something is not OK
 
 Shows an alert like this, based on **checkCapabilitiesAndRights**
 
-![image alt text](https://github.com/inbeacon/InbeaconSdk-IOS/blob/master/documentation/image_15.png)
+![image alt text](image_15.png)
 
 ```swift
 //Swift
