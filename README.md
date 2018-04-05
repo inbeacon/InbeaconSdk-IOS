@@ -4,22 +4,25 @@ Read the [full documentation](documentation/README.md)
 
 ## Basic implementation
 
-1. The Resono inBeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
+- The Resono inBeacon SDK is available trough [CocoaPods](http://cocoapods.org). To install
 it, add the following line to your Podfile: 
 
 	```ruby
 	pod "InbeaconSdk", '~> 2.3'  
 	```
 
-1. Get your `client-ID` and `client-Secret` from your [Resono account page](https://console.inbeacon.nl/account) and use these  credentials to configure your app.
+- Get your `client-ID` and `client-Secret` from your [Resono account page](https://console.inbeacon.nl/account) and use these  credentials to configure your app.
 
 
-1.   Add text items `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to the custom iOS target Properties in your plist "info" section.
-	Both should contain a custom text, for example:
+- Add plist item: **Privacy - Location Always Usage Description**  (**NSLocationAlwaysUsageDescription**) 
 
-	>Without this, the app never asks for permission to use location and inBeacon won’t function!
+- Add plist item: **Privacy - Location Always and When In Use Usage Description**  (**NSLocationAlwaysAndWhenInUseUsageDescription**) 
 
-1. Edit your AppDelegate.swift or AppDelegate.h/AppDelegate.m
+	Both should contain a custom text with an incentive for the user to turn **Always Allow** on.
+
+>Without this, the app never asks for permission to use location and the SDK won’t function!
+
+- Edit your AppDelegate.swift or AppDelegate.h/AppDelegate.m
 
 
 
