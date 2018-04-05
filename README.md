@@ -34,28 +34,27 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	var window: UIWindow?
+	
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret:  "<your client-Secret")
 		if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
-       } 
+			UNUserNotificationCenter.current().delegate = self
+		} 
 		return true
-    }
-    
-    @available(iOS 10.0, *)
+	}
+	
+	@available(iOS 10.0, *)
 	func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
-                  // not handled by inbeaconSdk..
-        }
-        completionHandler()
-    }
-    
-    @available(iOS 10.0, *)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.badge, .alert, .sound])
-    }
+		if !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
+			// not handled by inbeaconSdk..
+		}
+		completionHandler()
+	}
+	@available(iOS 10.0, *)
+	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+		completionHandler([.badge, .alert, .sound])
+	}
 }
 ```
 #### AppDelegate.h
@@ -88,14 +87,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 didReceiveNotificationResponse:(UNNotificationResponse *)response
          withCompletionHandler:(void (^)(void))completionHandler {
          
-    [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+	[InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
-    completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionAlert );
+	completionHandler(UNNotificationPresentationOptionSound | 
+							UNNotificationPresentationOptionBadge | 
+							UNNotificationPresentationOptionAlert );
 }
 
 @end
