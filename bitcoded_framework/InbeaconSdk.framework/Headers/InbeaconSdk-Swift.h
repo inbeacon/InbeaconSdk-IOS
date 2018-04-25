@@ -198,6 +198,7 @@ typedef SWIFT_ENUM(NSInteger, InbLogLevel) {
   InbLogLevelNone = 6,
 };
 
+@class UILocalNotification;
 @class UNNotification;
 @class NSNumber;
 @class NSError;
@@ -214,6 +215,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) InbeaconSdk * _Nonnull
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (void)refreshWithForce:(BOOL)force;
 - (void)refresh;
+- (BOOL)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification SWIFT_AVAILABILITY(ios,deprecated=10.0);
 - (BOOL)didReceiveUserNotification:(UNNotification * _Nonnull)notification SWIFT_AVAILABILITY(ios,introduced=10.0);
 /// <hr/>
 /// \code

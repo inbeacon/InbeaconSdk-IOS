@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
-#import <UserNotifications/UserNotifications.h>
+
 
 @interface AppDelegate ()
 
@@ -31,11 +31,22 @@
     // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
     inbeacon.IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 
+    if (@available(iOS 10, *)) {
+        // REQUIRED: We need a UserNotificationCenter delegate to handle notifications
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+    }
     return YES;
 }
 
+// REQUIRED: let InbeaconSDK handle its notifications
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     [InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+}
+
+// RECOMMENDED: Show notification even when app is in foreground
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler{
+    completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
