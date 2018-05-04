@@ -29,8 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // InbeaconSdk.sharedInstance.PPID = "your PPID for this device"
         
         // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
-        //InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
-        InbeaconSdk.createWith(clientId: "yqjoG98S", clientSecret:   "TjZZUHlra0RQT3NBT0JGNjlLUFpLcEZDczFnMUU2WU4") // ronaldtest
+        InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
         
         // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
         InbeaconSdk.sharedInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
