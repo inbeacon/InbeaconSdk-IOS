@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBCDA3BE209CA9C50070CF67 /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCDA3BA209CA9A10070CF67 /* InbeaconSdk.framework */; };
+		EBCDA3BF209CA9C50070CF67 /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBCDA3BA209CA9A10070CF67 /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBDD9C1220586F7A00DCFA5B /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0B20586F6800DCFA5B /* ascendent.caf */; };
 		EBDD9C1320586F7A00DCFA5B /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0620586F6800DCFA5B /* attention.caf */; };
 		EBDD9C1420586F7A00DCFA5B /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0E20586F6800DCFA5B /* bling.caf */; };
@@ -29,8 +31,6 @@
 		EBF34787205821B6007E681F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF34786205821B6007E681F /* main.m */; };
 		EBF34791205821B6007E681F /* objc_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF34790205821B6007E681F /* objc_exampleTests.m */; };
 		EBF3479C205821B6007E681F /* objc_exampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF3479B205821B6007E681F /* objc_exampleUITests.m */; };
-		EBF347AB20582299007E681F /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF347A920582288007E681F /* InbeaconSdk.framework */; };
-		EBF347AC20582299007E681F /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF347A920582288007E681F /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EBF347AD20582299007E681F /* Embed Frameworks */ = {
+		EBCDA3C0209CA9C50070CF67 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EBF347AC20582299007E681F /* InbeaconSdk.framework in Embed Frameworks */,
+				EBCDA3BF209CA9C50070CF67 /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EBCDA3BA209CA9A10070CF67 /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EBDD9C0420586F6800DCFA5B /* littledwarf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = littledwarf.caf; sourceTree = "<group>"; };
 		EBDD9C0520586F6800DCFA5B /* oldhorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oldhorn.caf; sourceTree = "<group>"; };
 		EBDD9C0620586F6800DCFA5B /* attention.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attention.caf; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		EBF34797205821B6007E681F /* objc-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF3479B205821B6007E681F /* objc_exampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_exampleUITests.m; sourceTree = "<group>"; };
 		EBF3479D205821B6007E681F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBF347A920582288007E681F /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF347AB20582299007E681F /* InbeaconSdk.framework in Frameworks */,
+				EBCDA3BE209CA9C50070CF67 /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +148,8 @@
 		EBF3476B205821B5007E681F = {
 			isa = PBXGroup;
 			children = (
+				EBCDA3BA209CA9A10070CF67 /* InbeaconSdk.framework */,
 				EBDD9C0320586F0A00DCFA5B /* resources */,
-				EBF347A920582288007E681F /* InbeaconSdk.framework */,
 				EBF34776205821B5007E681F /* objc-example */,
 				EBF3478F205821B6007E681F /* objc-exampleTests */,
 				EBF3479A205821B6007E681F /* objc-exampleUITests */,
@@ -211,7 +211,7 @@
 				EBF34770205821B5007E681F /* Sources */,
 				EBF34771205821B5007E681F /* Frameworks */,
 				EBF34772205821B5007E681F /* Resources */,
-				EBF347AD20582299007E681F /* Embed Frameworks */,
+				EBCDA3C0209CA9C50070CF67 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,13 +513,13 @@
 		EBF347A1205821B6007E681F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P7VV72C239;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/resources",
 				);
 				INFOPLIST_FILE = "objc-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -535,13 +535,13 @@
 		EBF347A2205821B6007E681F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P7VV72C239;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/resources",
 				);
 				INFOPLIST_FILE = "objc-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -25,12 +25,18 @@
     // OPTIONAL: postpone asking for permissions
     // InbeaconSdk.sharedInstance.askPermissions = NO;
     
+    // OPTIONAL: set the device PPID with your Publisher Provided ID
+    // InbeaconSdk.sharedInstance.PPID = @"your PPID for this device";
+    
     // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
     InbeaconSdk *inbeacon=[InbeaconSdk createWithClientID: @"demo" andClientSecret: @"QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng"];
     
-    // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
+    // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use. You might use PPID's instead
     inbeacon.IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 
+    // OPTIONAL: get the device PPID. If you set it yourself, this will be your PPID, otherwise it will be a generated PPID by the SDK
+    NSLog(@"inbeaconSDK PPID:%@", inbeacon.PPID);
+    
     if (@available(iOS 10, *)) {
         // REQUIRED: We need a UserNotificationCenter delegate to handle notifications
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];

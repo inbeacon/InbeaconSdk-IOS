@@ -1,3 +1,3 @@
-#### 2.3.01 (25-Apr-2018)
-- re-introduced didReceiveLocalNotification for support of pre iOS-10 targets
+#### 2.4.00 (04-May-2018)
+- PPID generator and property added
  

@@ -221,6 +221,29 @@ InbeaconSdk.sharedInstance.IDFA = [[[ASIdentifierManager sharedManager] advertis
 
 > you need to specify the use of the IDFA on app submission. 
 
+### PPID
+
+An alternative for the IDFA is to roll your own Publisher Provided ID. If you use Doubleclick For Publishers (DFP), a PPID might be a better option than using an IDFA. A PPID is a ID that is attached to the App on a Device that can be used for retargeting. 
+
+In addition to your own PPID's, the SDK will generate a unique ID, based on the device and app bundle. This can function as a PPID if you do not want to create your own. This PPID will survive app re-installs. The PPID provided by the SDK will be a UUID.
+
+> See [Google DFP documentation on PPID's](https://support.google.com/dfp_premium/answer/2880055?hl=en)
+
+The PPID is available as a read/write property of the SDK instance:
+
+```swift
+//Swift
+InbeaconSdk.sharedInstance.PPID = "your PPID for this device"  // OPTIONAL
+let ppid=InbeaconSdk.sharedInstance.PPID
+
+```
+```objc
+//Objective-C
+InbeaconSdk.sharedInstance.PPID = @"your PPID for this device"; // OPTIONAL
+NSLog(@"inbeaconSDK PPID:%@", InbeaconSdk.sharedInstance.PPID);
+```
+
+
 ### User properties and tags
 
 The inBeacon backend has user information for each device. The user information are properties that fall in any of the 3 categories:
