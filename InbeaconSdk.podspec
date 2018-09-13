@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         		= "InbeaconSdk"
-  s.version     		= "2.4.02"
+  s.version     		= "2.5.00"
   s.summary      		= "Inbeacon SDK framework for iOS (Obj-C & Swift)"
   s.homepage    		= "https://github.com/inbeacon/InbeaconSdk-IOS"
   s.author       		= { 'Ronald van Woensel' => 'ronald@inbeacon.nl' }
