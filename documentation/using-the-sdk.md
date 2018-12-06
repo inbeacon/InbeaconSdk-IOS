@@ -396,6 +396,24 @@ InbeaconSdk.sharedInstance.checkCapabilitiesAndRightsWithAlert()
 [InbeaconSdk.sharedInstance checkCapabilitiesAndRightsWithAlert];
 ```
 
+### GDPR Compliant User opt-out and forget
+Due to european GDPR rules, a user must have an option to be opted-out and all trackingdata be removed.
+If this option is set, all data of this user will be removed from the servers and no new data will be stored.
+
+If the user wants to opt-in again, this can be set with userOptIn (this is default). This will resume tracking by the inBeacon SDK
+
+
+```swift
+//Swift
+InbeaconSdk.sharedInstance.userOptOutAndForget()
+InbeaconSdk.sharedInstance.userOptIn()	
+```
+```objc
+//Objective-C
+[InbeaconSdk.sharedInstance userOptOutAndForget];
+[InbeaconSdk.sharedInstance userOptIn];
+``` 
+
 ## Sending custom events or touchpoints
 
 The SDK supports custom events. For example these can be used for:
