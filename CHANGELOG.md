@@ -1,3 +1,7 @@
+#### 2.5.11 (28-Mar-2019)
+- Updated swift and objective-c examples
+ 
+
 #### 2.5.10 (28-Mar-2019)
 - Xcode 10.2 / swift 5 version
  
