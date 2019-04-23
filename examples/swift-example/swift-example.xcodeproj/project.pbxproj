@@ -26,8 +26,8 @@
 		EB5187D81D2AC2B100DD3632 /* oldhorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C21D2AC2B000DD3632 /* oldhorn.caf */; };
 		EB5187D91D2AC2B100DD3632 /* pop.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C31D2AC2B000DD3632 /* pop.caf */; };
 		EB5187DB1D2AC2B100DD3632 /* sadtrombone.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */; };
-		EB622231226F4D440004C49B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB622230226F4D440004C49B /* InbeaconSdk.framework */; };
-		EB622232226F4D440004C49B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB622230226F4D440004C49B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB62223C226F53EB0004C49B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB62223B226F53EB0004C49B /* InbeaconSdk.framework */; };
+		EB62223D226F53EB0004C49B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB62223B226F53EB0004C49B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB622232226F4D440004C49B /* InbeaconSdk.framework in Embed Frameworks */,
+				EB62223D226F53EB0004C49B /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 		EB5187C21D2AC2B000DD3632 /* oldhorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oldhorn.caf; sourceTree = "<group>"; };
 		EB5187C31D2AC2B000DD3632 /* pop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop.caf; sourceTree = "<group>"; };
 		EB5187C51D2AC2B000DD3632 /* sadtrombone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sadtrombone.caf; sourceTree = "<group>"; };
-		EB622230226F4D440004C49B /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
+		EB62223B226F53EB0004C49B /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB622231226F4D440004C49B /* InbeaconSdk.framework in Frameworks */,
+				EB62223C226F53EB0004C49B /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 		EB224C9D1CA0B75E00BAB5B5 = {
 			isa = PBXGroup;
 			children = (
-				EB622230226F4D440004C49B /* InbeaconSdk.framework */,
+				EB62223B226F53EB0004C49B /* InbeaconSdk.framework */,
 				EB224CA81CA0B75E00BAB5B5 /* swift-example */,
 				EB224CA71CA0B75E00BAB5B5 /* Products */,
 			);

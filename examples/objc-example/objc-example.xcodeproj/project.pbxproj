@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB622235226F4F8F0004C49B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB622234226F4F8F0004C49B /* InbeaconSdk.framework */; };
-		EB622236226F4F8F0004C49B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB622234226F4F8F0004C49B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB622238226F536F0004C49B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB622237226F536F0004C49B /* InbeaconSdk.framework */; };
+		EB622239226F538E0004C49B /* InbeaconSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB622237226F536F0004C49B /* InbeaconSdk.framework */; };
+		EB62223A226F538E0004C49B /* InbeaconSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB622237226F536F0004C49B /* InbeaconSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBDD9C1220586F7A00DCFA5B /* ascendent.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0B20586F6800DCFA5B /* ascendent.caf */; };
 		EBDD9C1320586F7A00DCFA5B /* attention.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0620586F6800DCFA5B /* attention.caf */; };
 		EBDD9C1420586F7A00DCFA5B /* bling.caf in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9C0E20586F6800DCFA5B /* bling.caf */; };
@@ -57,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB622236226F4F8F0004C49B /* InbeaconSdk.framework in Embed Frameworks */,
+				EB62223A226F538E0004C49B /* InbeaconSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB622234226F4F8F0004C49B /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
+		EB622237226F536F0004C49B /* InbeaconSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InbeaconSdk.framework; sourceTree = "<group>"; };
 		EBDD9C0420586F6800DCFA5B /* littledwarf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = littledwarf.caf; sourceTree = "<group>"; };
 		EBDD9C0520586F6800DCFA5B /* oldhorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oldhorn.caf; sourceTree = "<group>"; };
 		EBDD9C0620586F6800DCFA5B /* attention.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attention.caf; sourceTree = "<group>"; };
@@ -103,7 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB622235226F4F8F0004C49B /* InbeaconSdk.framework in Frameworks */,
+				EB622239226F538E0004C49B /* InbeaconSdk.framework in Frameworks */,
+				EB622238226F536F0004C49B /* InbeaconSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +150,7 @@
 		EBF3476B205821B5007E681F = {
 			isa = PBXGroup;
 			children = (
-				EB622234226F4F8F0004C49B /* InbeaconSdk.framework */,
+				EB622237226F536F0004C49B /* InbeaconSdk.framework */,
 				EBDD9C0320586F0A00DCFA5B /* resources */,
 				EBF34776205821B5007E681F /* objc-example */,
 				EBF3478F205821B6007E681F /* objc-exampleTests */,

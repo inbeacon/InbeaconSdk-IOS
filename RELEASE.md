@@ -1,3 +1,3 @@
-#### 3.0.02 (23-Apr-2019)
-- examples updated
+#### 3.0.03 (23-Apr-2019)
+- minor issues
  
