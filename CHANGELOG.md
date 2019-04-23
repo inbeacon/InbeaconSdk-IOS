@@ -1,3 +1,7 @@
+#### 3.0.02 (23-Apr-2019)
+- examples updated
+ 
+
 #### 3.0.01 (23-Apr-2019)
 - Major new release of the resono/inbeacon iOS SDK
 - Support for hyperfences and microfences

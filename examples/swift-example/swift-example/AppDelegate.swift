@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // OPTIONAL: chance the logging level .verbose, .debug, .info, .warning, .error .severe(default) .none
-        //InbeaconSdk.sharedInstance.logLevel = .info
+        // InbeaconSdk.sharedInstance.logLevel = .debug
         
         // OPTIONAL: postpone asking for permissions
         // InbeaconSdk.sharedInstance.askPermissions = false

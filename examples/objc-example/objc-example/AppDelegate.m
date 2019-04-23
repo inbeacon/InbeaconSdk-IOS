@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // OPTIONAL: chance the logging level InbLogLevelVerbose, InbLogLevelDebug, InbLogLevelInfo, InbLogLevelWarning, InbLogLevelError, InbLogLevelSevere(default) or InbLogLevelNone
-    // InbeaconSdk.sharedInstance.logLevel = InbLogLevelInfo;
+    // InbeaconSdk.sharedInstance.logLevel = InbLogLevelDebug;
     
     // OPTIONAL: postpone asking for permissions
     // InbeaconSdk.sharedInstance.askPermissions = NO;
