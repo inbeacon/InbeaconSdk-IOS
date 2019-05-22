@@ -1,4 +1,3 @@
-#### 3.0.04 (22-May-2019)
-- removed KLCpopup library as it was no longer used
-
+#### 3.0.05 (22-May-2019)
+- Git rename limit solved for cocoaPod
  
