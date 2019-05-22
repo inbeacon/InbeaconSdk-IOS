@@ -18,7 +18,7 @@ FOUNDATION_EXPORT const unsigned char InbeaconSdkVersionString[];
 // #import <InbeaconSdk/objcClass.h>
 #import <InbeaconSdk/Hmac.h>
 #import <InbeaconSdk/WebViewJavascriptBridge.h>
-#import <InbeaconSdk/KLCPopup.h>
+//#import <InbeaconSdk/KLCPopup.h>
 
 
 
