@@ -17,7 +17,8 @@ FOUNDATION_EXPORT const unsigned char InbeaconSdkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <inBeaconSdk/PublicHeader.h>
 // #import <InbeaconSdk/objcClass.h>
 #import <InbeaconSdk/Hmac.h>
-#import <InbeaconSdk/WebViewJavascriptBridge.h>
+//#import <InbeaconSdk/WebViewJavascriptBridge.h>
+
 //#import <InbeaconSdk/KLCPopup.h>
 
 
