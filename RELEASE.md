@@ -1,3 +1,3 @@
-#### 3.1.00 (17-Sep-2019)
-- xCode 11 / Swift 5.1 / iOS 13 version
+#### 3.1.01 (18-Sep-2019)
+- removed coreBluetooth from SDK
  

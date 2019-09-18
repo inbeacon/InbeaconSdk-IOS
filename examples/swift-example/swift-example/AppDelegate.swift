@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // OPTIONAL: chance the logging level .verbose, .debug, .info, .warning, .error .severe(default) .none
-        // InbeaconSdk.sharedInstance.logLevel = .debug
+        InbeaconSdk.sharedInstance.logLevel = .debug
         
         // OPTIONAL: postpone asking for permissions
         // InbeaconSdk.sharedInstance.askPermissions = false
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // InbeaconSdk.sharedInstance.PPID = "your PPID for this device"
         
         // REQUIRED: initialize InbeaconSdk with credentials -- replace the demo credentials with your own values.
-        InbeaconSdk.createWith(clientId: "demo", clientSecret:  "QmE3WWlMNUluUnp2Y2h1MUF4NFpJQ01aZ2ZCRnVGbng")
+        InbeaconSdk.createWith(clientId: "yqjoG98S", clientSecret:  "TjZZUHlra0RQT3NBT0JGNjlLUFpLcEZDczFnMUU2WU4")
         
         // RECOMMENDED: Use IDFA - Only if your app is allowed to use IDFA. See Apple appstore rules for IDFA use.
         InbeaconSdk.sharedInstance.IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
