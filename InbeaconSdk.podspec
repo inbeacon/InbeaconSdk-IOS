@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         		= "InbeaconSdk"
-  s.version     		= "3.1.03"
+  s.version     		= "3.1.04"
   s.summary      		= "Inbeacon SDK framework for iOS (Obj-C & Swift)"
   s.homepage    		= "https://github.com/inbeacon/InbeaconSdk-IOS"
   s.author       		= { 'Ronald van Woensel' => 'ronald@inbeacon.nl' }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'InbeaconSdk.framework'
   s.resources 	  	= 'resources/*'
 
-  s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation', 'CoreBluetooth'
+  s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
