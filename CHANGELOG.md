@@ -1,3 +1,7 @@
+#### 3.1.02 (19-Sep-2019)
+- Removed coreBluetooth dependency from podspec
+ 
+
 #### 3.1.01 (18-Sep-2019)
 - removed coreBluetooth from SDK
  
