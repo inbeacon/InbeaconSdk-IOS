@@ -1,3 +1,3 @@
-#### 3.1.04 (19-Sep-2019)
-- cocapod issues
+#### 3.1.05 (04-Nov-2019)
+- xCode 11.2 / Swift 5.1.2 version
  
