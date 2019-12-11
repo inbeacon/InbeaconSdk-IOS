@@ -1,0 +1,16 @@
+PODS:
+  - InbeaconSdk (3.2.01)
+
+DEPENDENCIES:
+  - InbeaconSdk (~> 3.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - InbeaconSdk
+
+SPEC CHECKSUMS:
+  InbeaconSdk: 85878842713aa781f8e4077f4164c871549c83ca
+
+PODFILE CHECKSUM: eb8187dc270d7a57c95a31850cab140c69a73f89
+
+COCOAPODS: 1.7.5
