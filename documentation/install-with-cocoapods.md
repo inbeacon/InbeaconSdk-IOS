@@ -1,25 +1,26 @@
 # Steps
 Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application settings must be configured for correct integration of the SDK:
 
-## Add the inbeacon SDK to your podfile
-  To get the latest version of the InbeaconSdk from cocoapods, add this to your Podfile 
-> Xcode 9.3: version ~> 2.3
+## Add the Resono SDK to your podfile
+Subsequent swift versions are not backwards or upwards compatible, so you will always need to obtain an SDK version that fits your swift version. The SDK is normally released days after an official GA of xCode, so if you are using the latest xCode version, you should probably use the latest version of the SDK as well.
 
-> Xcode 9: version ~> 2.2
+To get the latest version of the Resono SDK from cocoapods, add this to your Podfile 
+>Note:
+>The SDK is called InbeaconSdk, not ResonoSdk for historical reasons.
 
   ```ruby
-  pod 'InbeaconSdk', '~> 2.3'
+  pod 'InbeaconSdk', '~> 3.0'
   ```
   Also make sure the "use_frameworks!" flag is supplied. A sample Podsfile:
 
   ```ruby
-  platform :ios, '9.0'
+  platform :ios, '10.0'
 
   target 'CocoapodTest' do
 
          	use_frameworks!
 
-         	pod 'InbeaconSdk', '~> 2.3'
+         	pod 'InbeaconSdk', '~> 3.0'
 
   end
   ```
@@ -44,22 +45,9 @@ Using [CocoaPods](https://cocoapods.org/pods/InbeaconSdk), a few application set
   
 ![image alt text](image_19.png)
   
-  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
-  
-  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
-  
   add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 
-  Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.
-
-
-## Bundle resources for customized notification sounds
-
-Customized sounds are available for local notifications. In order to use customized notification sounds, copy all files in the *./resources* directory of the SDK to your application bundle. You could do this by drag/dropping these into your "copy bundle resources" section of the Build Phases of your app:
-
-![image alt text](image_12.png)
-
-Customized sounds can be selected in the campaign action of the inBeacon backend console.    
+  Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.   
 
 
 ## Extra build options for objective-c projects 

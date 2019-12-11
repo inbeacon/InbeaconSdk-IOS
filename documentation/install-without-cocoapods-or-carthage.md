@@ -33,9 +33,6 @@ Drag the framework to your project and make sure the framework is embedded, as i
 
 ![image alt text](image_19.png)
     
-  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
-  
-  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
   
   add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 

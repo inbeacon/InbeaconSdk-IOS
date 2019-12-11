@@ -1,7 +1,7 @@
 ![image alt text](image_0.png)
 
-## inBeacon iOS xCode Swift and Objective-C SDK guide
-This document describes the latest version of the inBeacon iOS xCode SDK
+## Resono iOS xCode Swift and Objective-C SDK guide
+This document describes the latest version of the Resono iOS xCode SDK
 
 * [Before you start](before-you-start.md)  
 * [Installing the SDK](installing-the-sdk.md)  
@@ -9,15 +9,14 @@ This document describes the latest version of the inBeacon iOS xCode SDK
 * [Simple example, minimal setup](example-code.md)
 * [Troubleshooting](troubleshooting.md)  
 
-### inBeacon SDK’s platform support
-Integrating inBeacon is now easier than ever. It’s a matter of pasting a few lines of code to integrate our SDK into your project. The inBeacon mobile SDK’s are available for the following platforms:
+### Resono SDK platform support
+Integrating Resono is now easier than ever. It’s a matter of pasting a few lines of code to integrate our SDK into your project. The Resono mobile SDKs are available for the following platforms:
 
-* [inBeacon iOS swift and objective-c SDK](https://github.com/inbeacon/InbeaconSdk-IOS)	
-* [inBeacon Android java SDK](https://github.com/inbeacon/InbeaconSdk-android)	
-* [inBeacon Xamarin Android & iOS SDK](https://github.com/inbeacon/InbeaconSdk-xamarin)	
-* [inBeacon Cordova Android & iOS SDK](https://github.com/inbeacon/cordova-plugin-inbeacon)
+* [Resono iOS swift and objective-c SDK](https://github.com/inbeacon/InbeaconSdk-IOS)	
+* [Resono Android java and kotlin SDK](https://github.com/inbeacon/InbeaconSdk-android)		
+* [Resono Cordova Android & iOS SDK](https://github.com/inbeacon/cordova-plugin-inbeacon)
 
 ---
-© 2016 inBeacon bv. Padualaan 8 UtrechtInc Room Z108 3584 CH Utrecht The Netherlands
+© 2019 Resono bv, Amersfoort, The Netherlands
 
 

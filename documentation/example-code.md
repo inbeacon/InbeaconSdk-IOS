@@ -1,4 +1,4 @@
-### Full code examples for minimal setup:
+### Full code examples for basic setup:
 
 ### Swift
 
@@ -18,20 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
         InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret: "<your client-Secret")
         
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
-        }
-        
+        UNUserNotificationCenter.current().delegate = self
+
         return true
     }
 
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification)
         completionHandler()
     }
     
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.badge, .alert, .sound])
     }

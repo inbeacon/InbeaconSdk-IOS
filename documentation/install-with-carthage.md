@@ -2,15 +2,8 @@
 
 ## Add the inbeacon SDK to your Cartfile 
 ```ruby
-github "inbeacon/InbeaconSdk-IOS" ~>2.3
+github "inbeacon/InbeaconSdk-IOS" ~>3.0
 ```
-> Xcode 9.3: version ~> 2.3
-
-> Xcode 9: version ~> 2.2
-
-> Xcode 8: version ~> 2.1
-
-> Xcode 7: version ~> 2.0
 
 And run `carthage update`. This will update the universal InbeaconSdk-IOS framework in the Carthage checkouts directory.
 
@@ -38,11 +31,7 @@ Drag the framework to your project and make sure the framework is embedded, as i
     
 ![image alt text](image_19.png)
     
-  
-  Add: **Privacy - Bluetooth Peripheral Usage Description** (**NSBluetoothPeripheralUsageDescription**)
-  
-  Text that is shown under the permission dialog for accessing Bluetooth peripherals. Note that this dialog is *never* shown by the SDK, as it is only used to determine whether bluetooth turned ON or OFF. But on app submission, this item is mandatory. You can use a standard text: "to check your bluetooth status"
-  
+ 
   add: **Privacy - Location When in Use Usage Description**  (**NSLocationWhenInUseUsageDescription**)
 
   Text that is shown under the permission dialog when asked for "while using the app in the foreground". This is only necessary when using the 2-step “Selective Location Authorisation” mode.

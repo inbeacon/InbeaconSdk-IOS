@@ -79,7 +79,6 @@ func didReceiveUserNotification(_ notification: UNNotification) -> Bool
 
 ```swift
 //Swift
-@available(iOS 10.0, *)
 func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         If !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
                   // not handled by inbeaconSdk, so we need to handle it ourselves (or not..)
@@ -380,21 +379,6 @@ Errors can be one of the following (not localized, english only)
 
 >Do not call this right after first time app install as user permissions can be asked by iOS at that moment and will only become available after the user has responded to those questions. A good place to test this is on applicationWillEnterForeground
 
-### checkCapabilitiesAndRightsWithAlert
-A very basic method to show the user the action to take when something is not OK.
-
-Shows an alert like this, based on **checkCapabilitiesAndRights**
-
-![image alt text](image_15.png)
-
-```swift
-//Swift
-InbeaconSdk.sharedInstance.checkCapabilitiesAndRightsWithAlert()
-```
-```objc
-//Objective-C
-[InbeaconSdk.sharedInstance checkCapabilitiesAndRightsWithAlert];
-```
 
 ### GDPR Compliant User opt-out and forget
 Due to european GDPR rules, a user must have an option to be opted-out and all trackingdata be removed.
@@ -493,17 +477,11 @@ NSNotificationCenter.default.addObserver(self, selector: #selector(userInfoUpdat
 }
 ```
 
->### Best practices
->1. If you want your app to react on a beacon, location or geofence first check out the standard options that the inBeacon SDK offers out of the box. You can send local notifications and show webviews, images, video’s and more without using the SDK events at all. Go to the inBeacon campaign manager and set up a trigger with an action and a view.
-
->2. If you want to react on a beacon, location or geofence and use the notifications to handle this yourself, consider the `inb:AppEvent` first.  You can set up all beacon, location and geofence triggers in the campaign manager and launch an `inb:AppEvent` when the user opens the local notification. This is easy and flexible, as you can change the trigger later on without changing your app. Use a specific app-event-argument for specific actions, like showing a certain page.
-
->3. As a last resort you might react to `inb:location`, `inb:proximity` or `inb:geofence` events.
 
 All events start with inb: for namespacing purposes
 
 ### `inb:AppEvent`
-An app-event action has been triggered.
+An app-event action has been triggered from the campaign-designer.
 ```
 Userinfo:
 [
@@ -518,85 +496,12 @@ The argument that is supplied corresponds with the app-argment as given in the s
 You can use for instance a page-ID as app-argument to jump to a specific page location in your app.
 
 ### `inb:userinfo`
-A user property has been changed by the backend
+A user property has been changed after a resync is done, A user property can be changed on the backend or on the device. The resync works both ways.
 ```
 [
 "Key": user-property  
 ]
 ```
 
-### `inb:region`
-Send when entering or leaving a region (set of beacons with the same UUID)
-
-Userinfo:
-
-```
-[
-"rid": <id of region>,
-"io": "i" or “o” ,
-"uuid": region.UUIDString
-]
-```
-
-### `inb:location`
-Send when entering or leaving a location (set of beacons with the same UUID and major)
-
-```
-[
-"uuid": uuid.UUIDString,
-"major": String(major),
-"io": “i” or “o”  
-]
-```
- 
-### `inb:proximity`
-send when entering or leaving a proximity range
-
-```
-[
-"uuid":uuid.UUIDString,
-"major":String(major),
-"minor":String(minor),
-"Io": In.rawValue,   // “i” or “o”
-"prox":prox.rawValue // “N”, “F”, “I” (near/far/imm)
-]
-```
-
-### `inb:geofence`
-Send when entering or leaving a geofence
-
-Userinfo:
-
-```
-[
-"Fid":id,            // geofence ID see inbeacon beackend
-"io": io.rawValue    // “i” or “o”
-]
-```
-
-### `inb:trigger`
->(internal notification)
-
-Send when an offline trigger is fired 
- 
-```
-[
-"Id":id              // trigger ID see inbeacon backend
-]
-```
-
-### `inb:didreceivelocalnotification`
->(internal notification)
-
-Send when a local notification is opened that was initiated by inbeacon.
-
-```
-[
-"tid": trigger id    // trigger ID see inbeacon backend
-]
-```
-
----
-Instead of using the inb:region, inb:proximity, inb:location, inb:geofence or inb:trigger events, it is more flexible and easier to have your app react on inb:AppEvent and set up the corresponding trigger in the campaign designer.
 
 `Previous:` [Installing the SDK](installing-the-sdk.md)   `Next:` [Simple example, minimal setup](example-code.md)

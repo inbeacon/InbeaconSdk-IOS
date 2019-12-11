@@ -8,17 +8,19 @@ Read the [full documentation](documentation/README.md)
 it, add the following line to your Podfile: 
 
 	```ruby
-	pod "InbeaconSdk", '~> 2.3'  
+	pod "InbeaconSdk", '~> 3.2'  
 	```
 
 - Get your `client-ID` and `client-Secret` from your [Resono account page](https://console.inbeacon.nl/account) and use these  credentials to configure your app.
 
 
-- Add plist item: **Privacy - Location Always Usage Description**  (**NSLocationAlwaysUsageDescription**) 
+- Add plist items: 
 
-- Add plist item: **Privacy - Location Always and When In Use Usage Description**  (**NSLocationAlwaysAndWhenInUseUsageDescription**) 
+	**Privacy - Location Always Usage Description**  	(**NSLocationAlwaysUsageDescription**) 
 
-	Both should contain a custom text with an incentive for the user to turn **Always Allow** on.
+	**Privacy - Location Always and When In Use Usage Description**  	(**NSLocationAlwaysAndWhenInUseUsageDescription**) 
+
+	Both should contain a custom onboarding text with an incentive for the user to turn **Always Allow** on. 
 
 >Without this, the app never asks for permission to use location and the SDK won’t function!
 
@@ -37,21 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 	var window: UIWindow?
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		
+		// Fill in your credentials and initialize the SDK
 		InbeaconSdk.createWith(clientId: "<your client-ID>", clientSecret:  "<your client-Secret")
-		if #available(iOS 10.0, *) {
-			UNUserNotificationCenter.current().delegate = self
-		} 
+		
+		// make the AppDelegate also the delegate for UserNotifications
+		UNUserNotificationCenter.current().delegate = self
 		return true
 	}
-	
-	@available(iOS 10.0, *)
+
 	func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 		if !InbeaconSdk.sharedInstance.didReceiveUserNotification(response.notification) {
-			// not handled by inbeaconSdk..
+			// your own usernotifications can be processed here..
+			...
 		}
 		completionHandler()
 	}
-	@available(iOS 10.0, *)
+
 	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 		completionHandler([.badge, .alert, .sound])
 	}
@@ -78,8 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
 
-    [InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"]; 
-    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+	// Fill in your credentials and initialize the SDK
+	[InbeaconSdk createWithClientID: @"<your client-ID>" andClientSecret: @"<your client-Secret>"]; 
+   
+	// make the AppDelegate also the delegate for UserNotifications
+	[UNUserNotificationCenter currentNotificationCenter].delegate = self;
     
 }
 
@@ -87,7 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 didReceiveNotificationResponse:(UNNotificationResponse *)response
          withCompletionHandler:(void (^)(void))completionHandler {
          
-	[InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification];
+	if (![InbeaconSdk.sharedInstance didReceiveUserNotification: response.notification]) {
+		// your own usernotifications can be processed here..
+		...
+	}
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
