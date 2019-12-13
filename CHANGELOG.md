@@ -1,3 +1,7 @@
+#### 3.2.02 (13-Dec-2019)
+- fixed an issue that could crash the SDK on an invalid definition in the backend
+ 
+
 #### 3.2.01 (06-Dec-2019)
 - adapted to changed iOS 13 environment
 - hyperfence sensitivity enhanced
