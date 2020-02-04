@@ -1,3 +1,7 @@
+#### 3.2.05 (04-Feb-2020)
+- made with xCode version 11.3.1
+
+
 #### 3.2.04 (24-Dec-2019)
 - Less frequent backend offloading
 - Improved SDK stability
