@@ -1,3 +1,3 @@
-#### 3.2.05 (04-Feb-2020)
-- made with xCode version 11.3.1
-
+#### 3.2.06 (06-Apr-2020)
+- Xcode 11.4 version
+ 

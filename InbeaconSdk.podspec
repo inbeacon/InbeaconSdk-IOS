@@ -1,7 +1,7 @@
 # Note: do not alter. Generated from template Cocoapods/templates
 Pod::Spec.new do |s|
   s.name         		= "InbeaconSdk"
-  s.version     		= "3.2.05"
+  s.version     		= "3.2.06"
   s.summary      		= "Inbeacon SDK framework for iOS (Obj-C & Swift)"
   s.homepage    		= "https://github.com/inbeacon/InbeaconSdk-IOS"
   s.author       		= { 'Ronald van Woensel' => 'ronald@inbeacon.nl' }
