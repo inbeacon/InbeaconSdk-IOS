@@ -1,3 +1,7 @@
+#### 3.2.07 (04-Jun-2020)
+- xCode Version 11.5 (11E608c) recompile
+ 
+
 #### 3.2.06 (06-Apr-2020)
 - Xcode 11.4 version
  
