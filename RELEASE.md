@@ -1,3 +1,3 @@
-#### 3.2.07 (04-Jun-2020)
-- xCode Version 11.5 (11E608c) recompile
+#### 3.2.09 (09-Jul-2020)
+- emergency update for iOS 13.5.x battery issues
  
