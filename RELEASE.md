@@ -1,3 +1,3 @@
-#### 3.2.09 (09-Jul-2020)
-- emergency update for iOS 13.5.x battery issues
+#### 3.2.10 (29-Jul-2020)
+- xCode 11.6 / iOS 13.6 recompile
  
