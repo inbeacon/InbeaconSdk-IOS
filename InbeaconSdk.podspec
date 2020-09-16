@@ -1,7 +1,7 @@
 # Note: do not alter. Generated from template Cocoapods/templates
 Pod::Spec.new do |s|
   s.name         		= "InbeaconSdk"
-  s.version     		= "3.2.14"
+  s.version     		= "3.2.15"
   s.summary      		= "Inbeacon SDK framework for iOS (Obj-C & Swift)"
   s.homepage    		= "https://github.com/inbeacon/InbeaconSdk-IOS"
   s.author       		= { 'Ronald van Woensel' => 'ronald@inbeacon.nl' }
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source       		= { :git => "https://github.com/inbeacon/InbeaconSdk-IOS.git", :tag => s.version.to_s } 
   s.documentation_url 		= 'https://github.com/inbeacon/InbeaconSdk-IOS'
 
-  s.vendored_frameworks = 'InbeaconSdk.framework'
+  s.vendored_frameworks = 'InbeaconSdkBitcoded.framework'
   s.resources 	  	= 'resources/*'
 
   s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
