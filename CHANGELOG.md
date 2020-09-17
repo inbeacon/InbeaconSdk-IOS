@@ -1,19 +1,8 @@
-#### 3.2.15 (18-Sep-2020)
-- 
+#### 3.2.16 (18-Sep-2020)
+- Solved issues with CocoaPod. Unfortunately the pod does not contain a simulator version for now. 
+- new directory framework_versions which contain all generated framework architectures and bitcoded versions
+  
 
-#### 3.2.15 (18-Sep-2020)
-- issues with pod
- 
-
-#### 3.2.15 (18-Sep-2020)
-- 
-
-#### 3.2.15 (18-Sep-2020)
-- issues with cocoapods
- 
-
-#### 3.2.15 (18-Sep-2020)
-- issues with cocoapods
  
 
 #### 3.2.14 (16-Sep-2020)
