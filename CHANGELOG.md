@@ -1,3 +1,7 @@
+#### 3.2.15 (18-Sep-2020)
+- issues with cocoapods
+ 
+
 #### 3.2.14 (16-Sep-2020)
 - issue with simulator architectures fixed. 
  
