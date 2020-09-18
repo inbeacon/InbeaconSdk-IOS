@@ -14,7 +14,12 @@ Pod::Spec.new do |s|
   s.resources 	  	= 'resources/*'
   # all archs
   # s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7' }
-
+  # but exclude arm64 from simulator
+  s.pod_target_xcconfig = {
+    	'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
   s.license      = {
     :type => 'Copyright',
