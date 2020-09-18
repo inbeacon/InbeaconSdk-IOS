@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'InbeaconSdk.framework'
   s.resources 	  	= 'resources/*'
-  # no i386 and x86_64 
-  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7' }
+  # all archs
+  # s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7' }
 
   s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
   s.license      = {
