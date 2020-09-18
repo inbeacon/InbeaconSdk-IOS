@@ -208,12 +208,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, InbEndpoint, closed) {
+typedef SWIFT_ENUM(NSInteger, InbEndpoint, open) {
   InbEndpointProduction = 0,
   InbEndpointTesting = 1,
 };
 
-typedef SWIFT_ENUM(NSInteger, InbLogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, InbLogLevel, open) {
   InbLogLevelVerbose = 0,
   InbLogLevelDebug = 1,
   InbLogLevelInfo = 2,
@@ -483,12 +483,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, InbEndpoint, closed) {
+typedef SWIFT_ENUM(NSInteger, InbEndpoint, open) {
   InbEndpointProduction = 0,
   InbEndpointTesting = 1,
 };
 
-typedef SWIFT_ENUM(NSInteger, InbLogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, InbLogLevel, open) {
   InbLogLevelVerbose = 0,
   InbLogLevelDebug = 1,
   InbLogLevelInfo = 2,
@@ -758,12 +758,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, InbEndpoint, closed) {
+typedef SWIFT_ENUM(NSInteger, InbEndpoint, open) {
   InbEndpointProduction = 0,
   InbEndpointTesting = 1,
 };
 
-typedef SWIFT_ENUM(NSInteger, InbLogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, InbLogLevel, open) {
   InbLogLevelVerbose = 0,
   InbLogLevelDebug = 1,
   InbLogLevelInfo = 2,

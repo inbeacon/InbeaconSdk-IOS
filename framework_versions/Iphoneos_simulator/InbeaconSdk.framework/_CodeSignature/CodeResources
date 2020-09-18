@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/InbeaconSdk-Swift.h</key>
 		<data>
-		9gxSyv+qnZWwvKdSf+6PD76L/4M=
+		1xKLiK+G9osJ+X7Eujlk2qHkJIo=
 		</data>
 		<key>Headers/InbeaconSdk.h</key>
 		<data>
@@ -24,49 +24,73 @@
 		<data>
 		WOZ221G5phWuoljn2z/8V/R7/Xs=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		LbG0Vk41GwYdr+6mJ4oNkQY9G2k=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		200irIeNJoNIAqBDS04XY66Uc+Q=
+		C9Jm+pju6DKESrbILGJ3izmGUS4=
 		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftdoc</key>
 		<data>
 		WOZ221G5phWuoljn2z/8V/R7/Xs=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		LbG0Vk41GwYdr+6mJ4oNkQY9G2k=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		200irIeNJoNIAqBDS04XY66Uc+Q=
+		C9Jm+pju6DKESrbILGJ3izmGUS4=
 		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
 		BD9Lpq1+u5zbZjoU7ip/0GOZw5Y=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
+		<data>
+		ARF9csZ2GEqdAI6kAZiaCQjpb9Q=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		X2IN/xkHpoacy5CNFUe7paahfKc=
+		YyVKjHmmCTd4k5Xumee5k35o8c4=
 		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftdoc</key>
 		<data>
 		BD9Lpq1+u5zbZjoU7ip/0GOZw5Y=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftinterface</key>
+		<data>
+		ARF9csZ2GEqdAI6kAZiaCQjpb9Q=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftmodule</key>
 		<data>
-		X2IN/xkHpoacy5CNFUe7paahfKc=
+		YyVKjHmmCTd4k5Xumee5k35o8c4=
 		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
 		j7DmDC3gwMpHo3KZEbOOgoojfTc=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		78aXhLNWN0+MFtlEBCvr0KeVYiI=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		u9AhlRVIRcY2hP+9AAhu6JAxQuw=
+		QXWbm+qTzmxyb7hG3a47PxvDnpA=
 		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftdoc</key>
 		<data>
 		j7DmDC3gwMpHo3KZEbOOgoojfTc=
 		</data>
+		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftinterface</key>
+		<data>
+		78aXhLNWN0+MFtlEBCvr0KeVYiI=
+		</data>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		u9AhlRVIRcY2hP+9AAhu6JAxQuw=
+		QXWbm+qTzmxyb7hG3a47PxvDnpA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9gxSyv+qnZWwvKdSf+6PD76L/4M=
+			1xKLiK+G9osJ+X7Eujlk2qHkJIo=
 			</data>
 			<key>hash2</key>
 			<data>
-			VY07ASHs3K9qha0hp5YZ8P41fu2vs+C+Cujp7CDXnOs=
+			PRaC7kv+tkRmfvnFRur1XvUwubpx5MvsxzU0OZigTB0=
 			</data>
 		</dict>
 		<key>Headers/InbeaconSdk.h</key>
@@ -119,15 +143,26 @@
 			QUqf9u0+rI4PY8awFjwFmqVTNBrgl04S/jO72Cxl3B8=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LbG0Vk41GwYdr+6mJ4oNkQY9G2k=
+			</data>
+			<key>hash2</key>
+			<data>
+			bqY0ug8XBI6iJH9E2r5JrRq2Ei73+8vmctmzxhZ3gm4=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			200irIeNJoNIAqBDS04XY66Uc+Q=
+			C9Jm+pju6DKESrbILGJ3izmGUS4=
 			</data>
 			<key>hash2</key>
 			<data>
-			s6x9XsbIFYFE1AiTGBFCjCjcbrFCfDnF3QmTskN91tQ=
+			NJWDL+Q5nK450wTFY/iozgE84Zy049QybCJXAcsCRAQ=
 			</data>
 		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftdoc</key>
@@ -141,15 +176,26 @@
 			QUqf9u0+rI4PY8awFjwFmqVTNBrgl04S/jO72Cxl3B8=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LbG0Vk41GwYdr+6mJ4oNkQY9G2k=
+			</data>
+			<key>hash2</key>
+			<data>
+			bqY0ug8XBI6iJH9E2r5JrRq2Ei73+8vmctmzxhZ3gm4=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			200irIeNJoNIAqBDS04XY66Uc+Q=
+			C9Jm+pju6DKESrbILGJ3izmGUS4=
 			</data>
 			<key>hash2</key>
 			<data>
-			s6x9XsbIFYFE1AiTGBFCjCjcbrFCfDnF3QmTskN91tQ=
+			NJWDL+Q5nK450wTFY/iozgE84Zy049QybCJXAcsCRAQ=
 			</data>
 		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -163,15 +209,26 @@
 			h9ybREJu60dhYwrMBlmKj3NH+bhMDMCZLPUu0eaNGDA=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ARF9csZ2GEqdAI6kAZiaCQjpb9Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			npQj0tMmh3kilZfRjGznVdBYwSSi9+mecmms1L9fwFc=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X2IN/xkHpoacy5CNFUe7paahfKc=
+			YyVKjHmmCTd4k5Xumee5k35o8c4=
 			</data>
 			<key>hash2</key>
 			<data>
-			l0RiTBmFBGZr8Ep7WNN6bLLPsP+AVTAqvDd/LVhEZWM=
+			BWRpVuCMjYdoEC+zLnR0RF1NpAbj9+B22jjAiLuvwYI=
 			</data>
 		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftdoc</key>
@@ -185,15 +242,26 @@
 			h9ybREJu60dhYwrMBlmKj3NH+bhMDMCZLPUu0eaNGDA=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ARF9csZ2GEqdAI6kAZiaCQjpb9Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			npQj0tMmh3kilZfRjGznVdBYwSSi9+mecmms1L9fwFc=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X2IN/xkHpoacy5CNFUe7paahfKc=
+			YyVKjHmmCTd4k5Xumee5k35o8c4=
 			</data>
 			<key>hash2</key>
 			<data>
-			l0RiTBmFBGZr8Ep7WNN6bLLPsP+AVTAqvDd/LVhEZWM=
+			BWRpVuCMjYdoEC+zLnR0RF1NpAbj9+B22jjAiLuvwYI=
 			</data>
 		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -207,15 +275,26 @@
 			jAGpwWjhq8n754bhey//uOHbc8dK2KFBjYNPdiFoVys=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			78aXhLNWN0+MFtlEBCvr0KeVYiI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ge3CcDI6p0Qm0fhK2H1fcICnMBzvb4vqZC38Xuuwj9w=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u9AhlRVIRcY2hP+9AAhu6JAxQuw=
+			QXWbm+qTzmxyb7hG3a47PxvDnpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			DJBW2Hm/s166WzalRF/bxTQGiGtn6ahHjREhvOSrgjE=
+			cscjXETUSNwPCocwp6zDbYyhPv3sKaq1fxjICq6XY1o=
 			</data>
 		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftdoc</key>
@@ -229,15 +308,26 @@
 			jAGpwWjhq8n754bhey//uOHbc8dK2KFBjYNPdiFoVys=
 			</data>
 		</dict>
+		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			78aXhLNWN0+MFtlEBCvr0KeVYiI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ge3CcDI6p0Qm0fhK2H1fcICnMBzvb4vqZC38Xuuwj9w=
+			</data>
+		</dict>
 		<key>Modules/InbeaconSdk.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u9AhlRVIRcY2hP+9AAhu6JAxQuw=
+			QXWbm+qTzmxyb7hG3a47PxvDnpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			DJBW2Hm/s166WzalRF/bxTQGiGtn6ahHjREhvOSrgjE=
+			cscjXETUSNwPCocwp6zDbYyhPv3sKaq1fxjICq6XY1o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
