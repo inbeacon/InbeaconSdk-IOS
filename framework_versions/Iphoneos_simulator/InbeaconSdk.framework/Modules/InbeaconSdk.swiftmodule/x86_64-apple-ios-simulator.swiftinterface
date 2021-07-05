@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InbeaconSdk
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InbeaconSdk
 import AudioToolbox
 import CoreLocation
 import CoreMotion
@@ -14,8 +14,8 @@ public enum InOutOneshot : Swift.String {
   case In
   case Out
   case Oneshot
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -31,8 +31,8 @@ public enum InOutOneshot : Swift.String {
   public var description: Swift.String {
     get
   }
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -108,8 +108,8 @@ public enum UserinfoSource : Swift.Int {
   case srv
   case dev
   case devsend
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -117,8 +117,8 @@ public enum UserinfoSource : Swift.Int {
 @objc public enum InbEndpoint : Swift.Int {
   case production = 0
   case testing
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -130,11 +130,11 @@ public enum InbSdkErrorCode : Swift.Int {
   case locationRangingDisabled
   case notificationsBlocked
   case bluetoothOff
+  public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
-  public init?(rawValue: Swift.Int)
 }
 infix operator <<< : BitwiseShiftPrecedence
 extension CLLocationCoordinate2D : Swift.Equatable {
@@ -147,8 +147,8 @@ public enum SwiftyJSONError : Swift.Int, Swift.Error {
   case wrongType
   case notExist
   case invalidJSON
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -172,8 +172,8 @@ public enum Type : Swift.Int {
   case dictionary
   case null
   case unknown
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -224,9 +224,9 @@ extension JSON : Swift.Collection {
     get
   }
   public typealias Element = (Swift.String, InbeaconSdk.JSON)
+  public typealias Indices = Swift.DefaultIndices<InbeaconSdk.JSON>
   public typealias Iterator = Swift.IndexingIterator<InbeaconSdk.JSON>
   public typealias SubSequence = Swift.Slice<InbeaconSdk.JSON>
-  public typealias Indices = Swift.DefaultIndices<InbeaconSdk.JSON>
 }
 public enum JSONKey {
   case index(Swift.Int)
@@ -259,8 +259,8 @@ extension JSON : Swift.ExpressibleByStringLiteral {
   public init(stringLiteral value: Swift.StringLiteralType)
   public init(extendedGraphemeClusterLiteral value: InbeaconSdk.JSON.StringLiteralType)
   public init(unicodeScalarLiteral value: InbeaconSdk.JSON.StringLiteralType)
-  public typealias StringLiteralType = Swift.StringLiteralType
   public typealias ExtendedGraphemeClusterLiteralType = InbeaconSdk.JSON.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
   public typealias UnicodeScalarLiteralType = InbeaconSdk.JSON.StringLiteralType
 }
 extension JSON : Swift.ExpressibleByIntegerLiteral {
@@ -480,10 +480,10 @@ public enum writingOptionsKeys {
   case maxObjextDepth
   case encoding
   public static func == (a: InbeaconSdk.writingOptionsKeys, b: InbeaconSdk.writingOptionsKeys) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 extension JSON : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
